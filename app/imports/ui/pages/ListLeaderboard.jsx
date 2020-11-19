@@ -3,6 +3,7 @@ import { Meteor } from 'meteor/meteor';
 import { Container, Header, Loader, Table } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import Leaderboard from '../components/Leaderboard';
 import { Leaderboards } from '../../api/leaderboard/Leaderboards';
 
@@ -15,6 +16,7 @@ class ListLeaderboard extends React.Component {
 
   /** Render the page once subscriptions have been received. */
   renderPage() {
+    const headerStyle = { color: 'white' };
     return (
         <Container>
           <Header as="h2" textAlign="center" inverted>Leaderboard</Header>
@@ -30,6 +32,7 @@ class ListLeaderboard extends React.Component {
               {this.props.leaderboards.map((leaderboard) => <Leaderboard key={leaderboard._id} leaderboard={leaderboard} />)}
             </Table.Body>
           </Table>
+          <Header as ="h3" style={headerStyle} textAlign="center" inverted>Earn more points by joining a <Link to="/calendar">Study Session!</Link></Header>
         </Container>
     );
   }
