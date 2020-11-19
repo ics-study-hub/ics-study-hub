@@ -28,7 +28,7 @@ class Landing extends React.Component {
                     <Card fluid>
                         <Image src='images/collab.jpg' wrapped ui={false} />
                         <Card.Content>
-                            <Card.Header>Collaborate with other students.</Card.Header>
+                            <Card.Header>Collaborate with other students</Card.Header>
                         </Card.Content>
                     </Card>
                     {/** <Icon name='comment alternate' size='massive' className="landing-icons"/> */}
