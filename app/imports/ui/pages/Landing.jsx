@@ -5,8 +5,9 @@ import { Grid, Icon, Header } from 'semantic-ui-react';
 /** A simple static component to render some text for the landing page. */
 class Landing extends React.Component {
   render() {
+    const gridStyle = { marginTop: '10px' };
     return (
-        <Grid id='landing-page' verticalAlign='middle' textAlign='center' container>
+        <Grid id='landing-page' style={gridStyle} verticalAlign='middle' textAlign='center' container>
 
           <Header as="h1" >Welcome to the ICS Study Hub!</Header>
           <Grid.Row columns={3}>

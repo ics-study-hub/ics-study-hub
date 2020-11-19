@@ -33,7 +33,7 @@ class Calendar extends React.Component {
             </Table.Body>
           </Table>
         </Container> */
-        <h1>Current Sessions</h1>
+        <Header as="h1" textAlign="center">Current Sessions</Header>
     );
   }
 }
