@@ -24,16 +24,16 @@ class App extends React.Component {
   render() {
     return (
         <Router>
-          <div>
+          <div className="app-style">
             <NavBar/>
             <Switch>
               <Route exact path="/" component={Landing}/>
-              <Route exact path="/calendar" component={Calendar}/>
               <Route path="/signin" component={Signin}/>
               <Route path="/signup" component={Signup}/>
               <ProtectedRoute path="/create" component={Create}/>
               <ProtectedRoute path="/list" component={ListStuff}/>
               <ProtectedRoute path="/add" component={AddStuff}/>
+              <ProtectedRoute exact path="/calendar" component={Calendar}/>
               <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
               <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
               <ProtectedRoute path="/signout" component={Signout}/>
