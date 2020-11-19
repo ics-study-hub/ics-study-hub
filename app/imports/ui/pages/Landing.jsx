@@ -29,8 +29,6 @@ class Landing extends React.Component {
                 <Header as ="h2" style={headerStyle}>Here, you can give or receive help, work with others, and view questions or topics posted by other students!</Header>
                 <Header as ="h3" style={headerStyle}><Link to="/signin">Login</Link> to see Current Study Sessions, Events, and other useful info!</Header>
             </Grid.Row>
-
-
             </Grid>
         </div>
       </Container>
