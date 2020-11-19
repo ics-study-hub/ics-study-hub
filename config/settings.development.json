@@ -11,13 +11,13 @@
     { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
   ],
 
-  "defaultLeaderboard": [{
+  "defaultLeaderboards": [{
     "firstName": "Philip", "lastName": "Johnson", "ranking": 1 , "points": 5 ,
-    "image": "https://philipmjohnson.github.io/images/philip2.jpeg"
+    "image": "https://philipmjohnson.github.io/images/philip2.jpeg", "owner": "john@foo.com"
   },
     {
       "firstName": "Henri", "lastName": "Casanova", "ranking": 2 , "points": 2 ,
-      "image": "https://avatars0.githubusercontent.com/u/7494478?s=460&v=4"
+      "image": "https://avatars0.githubusercontent.com/u/7494478?s=460&v=4", "owner": "john@foo.com"
     }
   ]
 }

@@ -6,3 +6,11 @@
 .landing-icons{
     color: white;
 }
+
+.ui.center.aligned.container{
+  color: white;
+}
+
+.ui.table tr td{
+  border-top: 0px !important;
+}

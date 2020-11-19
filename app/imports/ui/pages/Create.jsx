@@ -56,7 +56,7 @@ class Create extends React.Component {
             </AutoForm>
           </Grid.Column>
         </Grid> */
-        <Header as="h1" textAlign="center">Create new sessions here</Header>
+        <Header as="h1" textAlign="center" inverted>Create new sessions here</Header>
     );
   }
 }

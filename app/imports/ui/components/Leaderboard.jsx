@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table } from 'semantic-ui-react';
+import { Table, Image } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 
@@ -9,8 +9,7 @@ class Leaderboard extends React.Component {
     return (
         <Table.Row>
           <Table.Cell>{this.props.leaderboard.ranking}</Table.Cell>
-          <Table.Cell>{this.props.leaderboard.image}</Table.Cell>
-          <Table.Cell>{this.props.leaderboard.firstName} {this.props.leaderboard.lastName}</Table.Cell>
+          <Table.Cell><Image size='mini' src={this.props.leaderboard.image}/> {this.props.leaderboard.firstName} {this.props.leaderboard.lastName}</Table.Cell>
           <Table.Cell>{this.props.leaderboard.points}</Table.Cell>
         </Table.Row>
     );
