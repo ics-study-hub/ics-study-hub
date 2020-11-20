@@ -1,0 +1,13 @@
+.app-style {
+    background-color: #024731;
+    background-attachment: fixed;
+    height: 105vh;
+}
+
+.landing-icons{
+    color: white;
+}
+
+.ui.table tr td{
+  border-top: 0px !important;
+}
