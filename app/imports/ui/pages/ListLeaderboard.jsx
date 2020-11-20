@@ -5,13 +5,13 @@ import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Leaderboard from '../components/Leaderboard';
-import { Leaderboards } from '../../api/leaderboard/Leaderboards';
+import { Leaderboards } from '../../api/leaderboard/Leaderboard';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class ListLeaderboard extends React.Component {
   /** If the subscription(s) have been received, render the page, otherwise show a loading icon. */
   render() {
-    return (this.props.ready) ? this.renderPage() : <Loader active>Getting data</Loader>;
+    return (this.props.ready) ? this.renderPage() : <Loader active inverted>Getting data</Loader>;
   }
 
   /** Render the page once subscriptions have been received. */
@@ -20,7 +20,7 @@ class ListLeaderboard extends React.Component {
     return (
         <Container>
           <Header as="h2" textAlign="center" inverted>Leaderboard</Header>
-          <Table basic='very' inverted sortable className="ui table">
+          <Table basic='very' inverted className="ui table">
             <Table.Header inverted>
               <Table.Row>
                 <Table.HeaderCell>Ranking</Table.HeaderCell>
@@ -28,7 +28,7 @@ class ListLeaderboard extends React.Component {
                 <Table.HeaderCell>Points</Table.HeaderCell>
               </Table.Row>
             </Table.Header>
-            <Table.Body className="ui table">
+            <Table.Body>
               {this.props.leaderboards.map((leaderboard) => <Leaderboard key={leaderboard._id} leaderboard={leaderboard} />)}
             </Table.Body>
           </Table>
