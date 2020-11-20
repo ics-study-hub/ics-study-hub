@@ -29,9 +29,9 @@ class Create extends React.Component {
 
   /** On submit, insert the data. */
   submit(data, formRef) {
-    const { name, reason, findGroup } = data;
+    const { name, reason, description, findGroup } = data;
     const owner = Meteor.user().username;
-    GroupSession.collection.insert({ name, reason, findGroup, owner },
+    GroupSession.collection.insert({ name, reason, description, findGroup, owner },
         (error) => {
           if (error) {
             swal('Error', error.message, 'error');
