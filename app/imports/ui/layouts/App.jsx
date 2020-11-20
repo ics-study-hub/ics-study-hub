@@ -14,7 +14,7 @@ import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
-import Calendar from '../pages/Calendar';
+import UserCalendar from '../pages/UserCalendar';
 import Create from '../pages/Create';
 import UserProfile from '../pages/UserProfile';
 import ListLeaderboard from '../pages/ListLeaderboard';
@@ -35,7 +35,7 @@ class App extends React.Component {
               <ProtectedRoute path="/listleaderboard" component={ListLeaderboard}/>
               <ProtectedRoute path="/list" component={ListStuff}/>
               <ProtectedRoute path="/add" component={AddStuff}/>
-              <ProtectedRoute exact path="/calendar" component={Calendar}/>
+              <ProtectedRoute exact path="/usercalendar" component={UserCalendar}/>
               <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
               <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
               <ProtectedRoute path="/signout" component={Signout}/>
