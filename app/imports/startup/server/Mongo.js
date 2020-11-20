@@ -1,6 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import { Stuffs } from '../../api/stuff/Stuff.js';
-import { Leaderboards } from '../../api/leaderboard/Leaderboards';
+import { Leaderboards } from '../../api/leaderboard/Leaderboard';
 
 /* eslint-disable no-console */
 
@@ -27,7 +27,7 @@ if (Stuffs.collection.find().count() === 0) {
 /** Initialize the collection if empty. */
 if (Leaderboards.collection.find().count() === 0) {
   if (Meteor.settings.defaultLeaderboards) {
-    console.log('Creating default data.');
+    console.log('Creating default leaderboard.');
     Meteor.settings.defaultLeaderboards.map(data => addLeaderboard(data));
   }
 }

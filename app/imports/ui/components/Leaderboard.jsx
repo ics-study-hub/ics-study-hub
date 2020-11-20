@@ -9,7 +9,11 @@ class Leaderboard extends React.Component {
     return (
         <Table.Row>
           <Table.Cell>{this.props.leaderboard.ranking}</Table.Cell>
-          <Table.Cell><Image size='mini' src={this.props.leaderboard.image}/> {this.props.leaderboard.firstName} {this.props.leaderboard.lastName}</Table.Cell>
+          <Table.Cell>
+            <Image size='mini' floated='left' src={this.props.leaderboard.image}/>
+            {this.props.leaderboard.firstName}
+            {this.props.leaderboard.lastName}
+          </Table.Cell>
           <Table.Cell>{this.props.leaderboard.points}</Table.Cell>
         </Table.Row>
     );
