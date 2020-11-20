@@ -48,7 +48,7 @@ class Create extends React.Component {
     return (
         <Grid container centered>
           <Grid.Column>
-            <Header as="h2" textAlign="center">Create a Session</Header>
+            <Header as="h2" textAlign="center" inverted>Create a Session</Header>
             <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
               <Segment>
                 <TextField name='name'/>
