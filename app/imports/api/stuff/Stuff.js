@@ -12,13 +12,18 @@ class StuffsCollection {
     // Define the structure of each document in the collection.
     this.schema = new SimpleSchema({
       name: String,
-      quantity: Number,
-      owner: String,
-      condition: {
+      reason: {
         type: String,
-        allowedValues: ['excellent', 'good', 'fair', 'poor'],
-        defaultValue: 'good',
+        allowedValues: ['Help', 'Finding a study session', 'Exam preparation'],
       },
+      owner: String,
+      description: String,
+      findGroup: {
+        type: String,
+        allowedValues: ['yes', 'no'],
+        defaultValue: 'yes',
+      },
+
     }, { tracker: Tracker });
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.
     this.collection.attachSchema(this.schema);

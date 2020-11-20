@@ -5,10 +5,8 @@
   ],
 
   "defaultData": [
-    { "name": "Basket", "quantity": 3, "owner": "john@foo.com", "condition": "excellent" },
-    { "name": "Bicycle", "quantity": 2, "owner": "john@foo.com", "condition": "poor" },
-    { "name": "Banana", "quantity": 2, "owner": "admin@foo.com", "condition": "good" },
-    { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
+    { "name": "Johnny Appleseed", "reason": "Help", "owner": "john@foo.com", "description": "There is a bug in my program but I cannot find it. Can I please get some help?", "findGroup": "yes" },
+    { "name": "Johnny Appleseed", "reason": "Help", "owner": "john@foo.com", "description": "There is a bug in my program but I cannot find it. Can I please get some help?", "findGroup": "yes" }
   ],
 
   "defaultLeaderboards": [{
