@@ -26,7 +26,6 @@ class ListStuff extends React.Component {
                 <Table.HeaderCell>Reason</Table.HeaderCell>
                 <Table.HeaderCell>Description</Table.HeaderCell>
                 <Table.HeaderCell>Find Group?</Table.HeaderCell>
-                <Table.HeaderCell>Edit</Table.HeaderCell>
               </Table.Row>
             </Table.Header>
             <Table.Body>

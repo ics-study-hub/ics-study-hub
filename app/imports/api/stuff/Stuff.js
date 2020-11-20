@@ -15,6 +15,7 @@ class StuffsCollection {
       reason: {
         type: String,
         allowedValues: ['Help', 'Finding a study session', 'Exam preparation'],
+        defaultValue: 'Help',
       },
       owner: String,
       description: String,

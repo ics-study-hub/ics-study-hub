@@ -12,9 +12,6 @@ class StuffItem extends React.Component {
           <Table.Cell>{this.props.stuff.reason}</Table.Cell>
           <Table.Cell>{this.props.stuff.description}</Table.Cell>
           <Table.Cell>{this.props.stuff.findGroup}</Table.Cell>
-          <Table.Cell>
-            <Link to={`/edit/${this.props.stuff._id}`}>Edit</Link>
-          </Table.Cell>
         </Table.Row>
     );
   }
