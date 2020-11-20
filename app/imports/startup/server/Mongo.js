@@ -12,7 +12,7 @@ function addData(data) {
 
 /** Initialize the database with a default data document. */
 function addLeaderboard(data) {
-  console.log(`  Adding: ${data.firstName} (${data.owner})`);
+  console.log(`  Adding: ${data.name} (${data.owner})`);
   Leaderboards.collection.insert(data);
 }
 

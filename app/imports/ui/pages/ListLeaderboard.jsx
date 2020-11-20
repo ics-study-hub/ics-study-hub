@@ -20,7 +20,7 @@ class ListLeaderboard extends React.Component {
     return (
         <Container>
           <Header as="h2" textAlign="center" inverted>Leaderboard</Header>
-          <Table basic='very' inverted sortable className="ui table">
+          <Table basic='very' inverted className="ui table">
             <Table.Header inverted>
               <Table.Row>
                 <Table.HeaderCell>Ranking</Table.HeaderCell>

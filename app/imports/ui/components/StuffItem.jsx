@@ -1,19 +1,16 @@
 import React from 'react';
-import { Table } from 'semantic-ui-react';
+import { Image, Table } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import { withRouter, Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class StuffItem extends React.Component {
   render() {
     return (
         <Table.Row>
-          <Table.Cell>{this.props.stuff.name}</Table.Cell>
-          <Table.Cell>{this.props.stuff.quantity}</Table.Cell>
-          <Table.Cell>{this.props.stuff.condition}</Table.Cell>
-          <Table.Cell>
-            <Link to={`/edit/${this.props.stuff._id}`}>Edit</Link>
-          </Table.Cell>
+          <Table.Cell>{this.props.stuff.ranking}</Table.Cell>
+          <Table.Cell><Image size='mini' floated='left' src={this.props.stuff.image}/>{this.props.stuff.name}</Table.Cell>
+          <Table.Cell>{this.props.stuff.points}</Table.Cell>
         </Table.Row>
     );
   }
