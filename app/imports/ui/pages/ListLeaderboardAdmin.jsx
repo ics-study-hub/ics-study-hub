@@ -4,14 +4,14 @@ import { Container, Header, Loader, Table } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import Leaderboard from '../components/Leaderboard';
 import { Leaderboards } from '../../api/leaderboard/Leaderboard';
+import LeaderboardAdmin from '../components/LeaderboardAdmin';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
-class ListLeaderboard extends React.Component {
+class ListLeaderboardAdmin extends React.Component {
   /** If the subscription(s) have been received, render the page, otherwise show a loading icon. */
   render() {
-    return (this.props.ready) ? this.renderPage() : <Loader active>Getting data</Loader>;
+    return (this.props.ready) ? this.renderPage() : <Loader active inverted>Getting data</Loader>;
   }
 
   /** Render the page once subscriptions have been received. */
@@ -28,7 +28,7 @@ class ListLeaderboard extends React.Component {
               </Table.Row>
             </Table.Header>
             <Table.Body>
-              {this.props.leaderboards.map((leaderboard) => <Leaderboard key={leaderboard._id} leaderboard={leaderboard} />)}
+              {this.props.leaderboards.map((leaderboard) => <LeaderboardAdmin key={leaderboard._id} leaderboard={leaderboard} />)}
             </Table.Body>
           </Table>
           <Header as ="h3" textAlign="center">Earn more points by joining a <Link to="/calendar">Study Session!</Link></Header>
@@ -37,7 +37,7 @@ class ListLeaderboard extends React.Component {
   }
 }
 /** Require an array of Stuff documents in the props. */
-ListLeaderboard.propTypes = {
+ListLeaderboardAdmin.propTypes = {
   leaderboards: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
@@ -50,4 +50,4 @@ export default withTracker(() => {
     leaderboards: Leaderboards.collection.find({}).fetch(),
     ready: subscription.ready(),
   };
-})(ListLeaderboard);
+})(ListLeaderboardAdmin);

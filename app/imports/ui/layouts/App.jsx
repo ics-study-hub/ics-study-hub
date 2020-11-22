@@ -19,6 +19,7 @@ import UserProfile from '../pages/UserProfile';
 import ListLeaderboard from '../pages/ListLeaderboard';
 import ListStuff from '../pages/ListStuff';
 import AddStuff from '../pages/AddStuff';
+import ListLeaderboardAdmin from '../pages/ListLeaderboardAdmin';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -38,6 +39,8 @@ class App extends React.Component {
               <ProtectedRoute exact path="/usercalendar" component={UserCalendar}/>
               <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
               <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
+              <AdminProtectedRoute path="/usercalendar" component={UserCalendar}/>
+              <AdminProtectedRoute path="/leaderboard" component={ListLeaderboard}/>
               <ProtectedRoute path="/signout" component={Signout}/>
               <ProtectedRoute path="/user-profile" component={UserProfile}/>
               <Route component={NotFound}/>
