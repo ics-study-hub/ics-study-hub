@@ -39,8 +39,7 @@ class App extends React.Component {
               <ProtectedRoute exact path="/usercalendar" component={UserCalendar}/>
               <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
               <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
-              <AdminProtectedRoute path="/usercalendar" component={UserCalendar}/>
-              <AdminProtectedRoute path="/leaderboard" component={ListLeaderboard}/>
+              <AdminProtectedRoute path="/leaderboardadmin" component={ListLeaderboardAdmin}/>
               <ProtectedRoute path="/signout" component={Signout}/>
               <ProtectedRoute path="/user-profile" component={UserProfile}/>
               <Route component={NotFound}/>

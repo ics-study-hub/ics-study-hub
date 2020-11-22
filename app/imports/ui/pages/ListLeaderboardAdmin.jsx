@@ -18,7 +18,7 @@ class ListLeaderboardAdmin extends React.Component {
   renderPage() {
     return (
         <Container>
-          <Header as="h2" textAlign="center">Leaderboard</Header>
+          <Header as="h2" textAlign="center">Leaderboard (Admin)</Header>
           <Table basic='very' className="ui table">
             <Table.Header>
               <Table.Row>
