@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Header, Loader, Table } from 'semantic-ui-react';
+import { Container, Header, Loader, Table, Menu, Icon } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
@@ -30,6 +30,24 @@ class ListLeaderboard extends React.Component {
             <Table.Body>
               {this.props.leaderboards.map((leaderboard) => <Leaderboard key={leaderboard._id} leaderboard={leaderboard} />)}
             </Table.Body>
+            <Table.Footer>
+              <Table.Row>
+                <Table.HeaderCell colSpan='3'>
+                  <Menu floated='right' pagination>
+                    <Menu.Item as='a' icon>
+                      <Icon name='chevron left' />
+                    </Menu.Item>
+                    <Menu.Item as='a'>1</Menu.Item>
+                    <Menu.Item as='a'>2</Menu.Item>
+                    <Menu.Item as='a'>3</Menu.Item>
+                    <Menu.Item as='a'>4</Menu.Item>
+                    <Menu.Item as='a' icon>
+                      <Icon name='chevron right' />
+                    </Menu.Item>
+                  </Menu>
+                </Table.HeaderCell>
+              </Table.Row>
+            </Table.Footer>
           </Table>
           <Header as ="h3" textAlign="center">Earn more points by joining a <Link to="/calendar">Study Session!</Link></Header>
         </Container>
