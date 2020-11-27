@@ -18,6 +18,8 @@ class StuffsCollection {
         defaultValue: 'Help',
       },
       owner: String,
+      time: String,
+      date: String,
       description: String,
       findGroup: {
         type: String,

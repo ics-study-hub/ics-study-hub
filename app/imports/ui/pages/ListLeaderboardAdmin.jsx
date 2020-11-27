@@ -3,7 +3,6 @@ import { Meteor } from 'meteor/meteor';
 import { Container, Table, Header, Loader } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import { Leaderboards } from '../../api/leaderboard/Leaderboard';
 import LeaderboardAdmin from '../components/LeaderboardAdmin';
 
@@ -31,7 +30,6 @@ class ListLeaderboardAdmin extends React.Component {
               {this.props.leaderboards.map((leaderboard) => <LeaderboardAdmin key={leaderboard._id} leaderboard={leaderboard} />)}
             </Table.Body>
           </Table>
-          <Header as ="h3" textAlign="center">Earn more points by joining a <Link to="/usercalendar">Study Session!</Link></Header>
         </Container>
     );
   }

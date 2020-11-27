@@ -5,7 +5,7 @@ import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import SimpleSchema from 'simpl-schema';
-import { GroupSession } from '../../api/session/GroupSession';
+import { Stuffs } from '../../api/stuff/Stuff';
 
 /** Create a schema to specify the structure of the data to appear in the form. */
 const formSchema = new SimpleSchema({
@@ -15,6 +15,8 @@ const formSchema = new SimpleSchema({
     allowedValues: ['Help', 'Finding a study session', 'Exam preparation'],
 },
   description: String,
+  time: String,
+  date: String,
   findGroup: {
     type: String,
     allowedValues: ['yes', 'no'],
@@ -29,9 +31,9 @@ class Create extends React.Component {
 
   /** On submit, insert the data. */
   submit(data, formRef) {
-    const { name, reason, description, findGroup } = data;
+    const { name, reason, time, date, description, findGroup } = data;
     const owner = Meteor.user().username;
-    GroupSession.collection.insert({ name, reason, description, findGroup, owner },
+    Stuffs.collection.insert({ name, reason, time, date, description, findGroup, owner },
         (error) => {
           if (error) {
             swal('Error', error.message, 'error');
@@ -53,6 +55,8 @@ class Create extends React.Component {
               <Segment>
                 <TextField name='name'/>
                 <SelectField name='reason'/>
+                <TextField name='time'/>
+                <TextField name='date'/>
                 <SelectField name='findGroup'/>
                 <LongTextField name = 'description'/>
                 <SubmitField value='Submit'/>

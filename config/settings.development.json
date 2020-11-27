@@ -6,8 +6,8 @@
 
   "defaultData": [
 
-    { "name": "Johnny Johnson", "reason": "Help", "owner": "john@foo.com", "description": "There is a bug in my program but I cannot find it. Can I please get some help?", "findGroup": "yes" },
-    { "name": "Amanda McPhearson", "reason": "Help", "owner": "john@foo.com", "description": "Need help on my project", "findGroup": "yes" }
+    { "name": "Johnny Johnson", "reason": "Help", "owner": "john@foo.com", "date":"11/16/2020", "time":"6:00 pm", "description": "There is a bug in my program but I cannot find it. Can I please get some help?", "findGroup": "yes" },
+    { "name": "Amanda McPhearson", "reason": "Help", "owner": "john@foo.com", "date":"12/1/2020", "time":"1:00 pm", "description": "Need help on my project", "findGroup": "yes" }
   ],
 
   "defaultLeaderboards": [
