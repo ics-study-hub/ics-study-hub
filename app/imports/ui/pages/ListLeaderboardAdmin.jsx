@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Header, Icon, Loader, Menu, Table } from 'semantic-ui-react';
+import { Container, Table, Header, Loader, Menu, Icon } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
@@ -11,14 +11,14 @@ import LeaderboardAdmin from '../components/LeaderboardAdmin';
 class ListLeaderboardAdmin extends React.Component {
   /** If the subscription(s) have been received, render the page, otherwise show a loading icon. */
   render() {
-    return (this.props.ready) ? this.renderPage() : <Loader active inverted>Getting data</Loader>;
+    return (this.props.ready) ? this.renderPage() : <Loader active>Getting data</Loader>;
   }
 
   /** Render the page once subscriptions have been received. */
   renderPage() {
     return (
         <Container>
-          <Header as="h2" textAlign="center">Leaderboard (Admin)</Header>
+          <Header as="h2" textAlign="center">Leaderboard</Header>
           <Table basic='very' className="ui table">
             <Table.Header>
               <Table.Row>
@@ -49,11 +49,12 @@ class ListLeaderboardAdmin extends React.Component {
               </Table.Row>
             </Table.Footer>
           </Table>
-          <Header as ="h3" textAlign="center">Earn more points by joining a <Link to="/calendar">Study Session!</Link></Header>
+          <Header as ="h3" textAlign="center">Earn more points by joining a <Link to="/usercalendar">Study Session!</Link></Header>
         </Container>
     );
   }
 }
+
 /** Require an array of Stuff documents in the props. */
 ListLeaderboardAdmin.propTypes = {
   leaderboards: PropTypes.array.isRequired,
@@ -63,7 +64,7 @@ ListLeaderboardAdmin.propTypes = {
 /** withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker */
 export default withTracker(() => {
   // Get access to Stuff documents.
-  const subscription = Meteor.subscribe(Leaderboards.userPublicationName);
+  const subscription = Meteor.subscribe(Leaderboards.adminPublicationName);
   return {
     leaderboards: Leaderboards.collection.find({}).fetch(),
     ready: subscription.ready(),

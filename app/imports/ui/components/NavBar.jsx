@@ -15,17 +15,16 @@ class NavBar extends React.Component {
           <Menu.Item as={NavLink} activeClassName="" exact to="/">
             <Header inverted as='h1'>ICS Study Hub</Header>
           </Menu.Item>
-          {this.props.currentUser ? (
+          {this.props.currentUser && Roles.userIsInRole(Meteor.userId(), 'admin') === false ? (
               [<Menu.Item as={NavLink} activeClassName="" exact to="/usercalendar" key='usercalendar'>Current Sessions</Menu.Item>,
                   <Menu.Item as={NavLink} activeClassName="active" exact to="/create" key='create'>Create</Menu.Item>,
-                  <Menu.Item as={NavLink} activeClassName="active" exact to="/listleaderboard" key='listleaderboard'>Leaderboard</Menu.Item>,
-                <Menu.Item as={NavLink} activeClassName="active" exact to="/list" key='list'>List Available Sessions</Menu.Item>]
+                <Menu.Item as={NavLink} activeClassName="active" exact to="/list" key='list'>List Available Sessions</Menu.Item>,
+                  <Menu.Item as={NavLink} activeClassName="active" exact to="/listleaderboard" key='listleaderboard'>Leaderboard</Menu.Item>]
           ) : ''}
           {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
-              <Menu.Item as={NavLink} activeClassName="active" exact to="/admin" key='admin'>List Available Sessions Admin</Menu.Item>
-          ) : ''}
-          {Roles.userIsInRole(Meteor.userId(), 'admin') ? (
-              <Menu.Item as={NavLink} activeClassName="active" exact to="/leaderboardadmin" key='leaderboardadmin'>Leaderboard Admin</Menu.Item>
+              [<Menu.Item as={NavLink} activeClassName="" exact to="/usercalendar" key='usercalendar'>Current Sessions</Menu.Item>,
+                  <Menu.Item as={NavLink} activeClassName="active" exact to="/admin" key='admin'>List Available Sessions Admin</Menu.Item>,
+                  <Menu.Item as={NavLink} activeClassName="active" exact to="/leaderboardadmin" key='leaderboardadmin'>Leaderboard Admin</Menu.Item>]
           ) : ''}
           <Menu.Item position="right">
             {this.props.currentUser === '' ? (
