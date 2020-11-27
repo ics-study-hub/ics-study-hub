@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table } from 'semantic-ui-react';
+import { Button, Table } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
 /** Renders a single row in the List Stuff (Admin) table. See pages/ListStuffAdmin.jsx. */
@@ -11,6 +11,7 @@ class StuffItemAdmin extends React.Component {
           <Table.Cell>{this.props.stuff.reason}</Table.Cell>
           <Table.Cell>{this.props.stuff.description}</Table.Cell>
           <Table.Cell>{this.props.stuff.findGroup}</Table.Cell>
+          <Table.Cell><Button negative icon="trash alternate"/></Table.Cell>
         </Table.Row>
     );
   }

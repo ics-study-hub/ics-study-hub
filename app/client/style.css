@@ -15,3 +15,8 @@
 footer {
   box-shadow: 0 50vh 0 50vh #FCF6F5FF;
 }
+
+.delete-button{
+  padding-left: 80px;
+  padding-right: 0;
+}

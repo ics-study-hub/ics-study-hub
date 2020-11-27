@@ -19,7 +19,7 @@ class ListStuff extends React.Component {
     return (
         <Container>
           <Header as="h2" textAlign="center">Available Sessions</Header>
-          <Table celled>
+          <Table basic='very' className="ui table">
             <Table.Header>
               <Table.Row>
                 <Table.HeaderCell>Name</Table.HeaderCell>

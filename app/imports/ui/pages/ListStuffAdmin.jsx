@@ -19,7 +19,7 @@ class ListStuffAdmin extends React.Component {
     return (
         <Container>
           <Header as="h2" textAlign="center">Available Sessions (Admin)</Header>
-          <Table celled>
+          <Table basic='very' className="ui table">
             <Table.Header>
               <Table.Row>
                 <Table.HeaderCell>Name</Table.HeaderCell>
