@@ -31,7 +31,7 @@ class ListLeaderboard extends React.Component {
               {this.props.leaderboards.map((leaderboard) => <Leaderboard key={leaderboard._id} leaderboard={leaderboard} />)}
             </Table.Body>
           </Table>
-          <Header as ="h3" textAlign="center">Earn more points by joining a <Link to="/calendar">Study Session!</Link></Header>
+          <Header as ="h3" textAlign="center">Earn more points by joining a <Link to="/list">Study Session!</Link></Header>
         </Container>
     );
   }
