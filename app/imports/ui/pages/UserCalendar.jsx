@@ -5,6 +5,7 @@ import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import FullCalendar from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
+import interactionPlugin from '@fullcalendar/interaction';
 import { Stuffs } from '../../api/stuff/Stuff';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
@@ -20,8 +21,13 @@ class UserCalendar extends React.Component {
     return (
         <Container>
         <FullCalendar
-            plugins={[dayGridPlugin]}
+            plugins={[interactionPlugin, dayGridPlugin]}
             initialView="dayGridMonth"
+            selectable='true'
+            events={[
+              { title: 'Johnny Johnson', date: '2020-11-16' },
+              { title: 'Amanda McPhearson', date: '2020-12-01' },
+            ]}
         />
         </Container>
     );

@@ -16,6 +16,7 @@ class ListStuffAdmin extends React.Component {
 
   /** Render the page once subscriptions have been received. */
   renderPage() {
+    const deleteTask = ({ _id }) => Stuffs.remove(_id);
     return (
         <Container>
           <Header as="h2" textAlign="center">Available Sessions (Admin)</Header>
@@ -31,7 +32,7 @@ class ListStuffAdmin extends React.Component {
               </Table.Row>
             </Table.Header>
             <Table.Body>
-              {this.props.stuffs.map((stuff) => <StuffItemAdmin key={stuff._id} stuff={stuff} />)}
+              {this.props.stuffs.map((stuff) => <StuffItemAdmin key={stuff._id} onDeleteClick={deleteTask} stuff={stuff} />)}
             </Table.Body>
           </Table>
         </Container>

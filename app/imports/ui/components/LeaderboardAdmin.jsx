@@ -10,7 +10,7 @@ class LeaderboardAdmin extends React.Component {
           <Table.Cell>{this.props.leaderboard.ranking}</Table.Cell>
           <Table.Cell><Image size='mini' floated='left' src={this.props.leaderboard.image}/>{this.props.leaderboard.name}</Table.Cell>
           <Table.Cell>{this.props.leaderboard.points}</Table.Cell>
-          <Table.Cell><Button negative icon="trash alternate"/></Table.Cell>
+          <Table.Cell><Button negative>&times;</Button></Table.Cell>
         </Table.Row>
     );
   }

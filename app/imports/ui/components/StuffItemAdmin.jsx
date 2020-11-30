@@ -13,7 +13,7 @@ class StuffItemAdmin extends React.Component {
           <Table.Cell>{this.props.stuff.date}</Table.Cell>
           <Table.Cell>{this.props.stuff.description}</Table.Cell>
           <Table.Cell>{this.props.stuff.findGroup}</Table.Cell>
-          <Table.Cell><Button negative icon="trash alternate"/></Table.Cell>
+          <Table.Cell><Button negative>&times;</Button></Table.Cell>
         </Table.Row>
     );
   }
