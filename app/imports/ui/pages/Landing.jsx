@@ -19,8 +19,7 @@ class Landing extends React.Component {
               </Grid.Row>
               <Grid.Row columns={3}>
                 {this.props.currentUser === '' ? (
-                    // eslint-disable-next-line react/jsx-key
-                    [<Grid.Column>
+                    [<Grid.Column key='create'>
                       <Card fluid>
                         <Image src='images/calendar1.jpg' wrapped ui={false} />
                         <Card.Content>
@@ -29,8 +28,7 @@ class Landing extends React.Component {
                       </Card>
                       {/** <Icon name='calendar' size='massive' className="landing-icons"/> */}
                     </Grid.Column>,
-                      // eslint-disable-next-line react/jsx-key
-                      <Grid.Column>
+                      <Grid.Column key='create'>
                         <Card fluid>
                           <Image src='images/collab.jpg' wrapped ui={false} />
                           <Card.Content>
@@ -39,8 +37,7 @@ class Landing extends React.Component {
                         </Card>
                         {/** <Icon name='comment alternate' size='massive' className="landing-icons"/> */}
                       </Grid.Column>,
-                      // eslint-disable-next-line react/jsx-key
-                      <Grid.Column>
+                      <Grid.Column key='leaderboard'>
                         <Card fluid>
                           <Image src='images/rewards.png' wrapped ui={false} />
                           <Card.Content>
@@ -51,8 +48,7 @@ class Landing extends React.Component {
                       </Grid.Column>]
                 ) : ''}
                 {this.props.currentUser && Roles.userIsInRole(Meteor.userId(), 'admin') === false ? (
-                    // eslint-disable-next-line react/jsx-key
-               [<Grid.Column>
+               [<Grid.Column key='usercalendar'>
                  <Link to="/usercalendar">
                   <Card fluid>
                     <Image src='images/calendar1.jpg' wrapped ui={false} />
@@ -62,8 +58,7 @@ class Landing extends React.Component {
                   </Card>
                    {/** <Icon name='calendar' size='massive' className="landing-icons"/> */}</Link>
                 </Grid.Column>,
-                 // eslint-disable-next-line react/jsx-key
-                <Grid.Column>
+                <Grid.Column key='create'>
                   <Link to="/create">
                   <Card fluid>
                     <Image src='images/collab.jpg' wrapped ui={false} />
@@ -74,8 +69,7 @@ class Landing extends React.Component {
                   {/** <Icon name='comment alternate' size='massive' className="landing-icons"/> */}
                   </Link>
                 </Grid.Column>,
-                 // eslint-disable-next-line react/jsx-key
-                <Grid.Column>
+                <Grid.Column key='listleaderboard'>
                   <Link to="/listleaderboard">
                   <Card fluid>
                     <Image src='images/rewards.png' wrapped ui={false} />
@@ -88,8 +82,7 @@ class Landing extends React.Component {
                 </Grid.Column>]
                   ) : ''}
                 {this.props.currentUser && Roles.userIsInRole(Meteor.userId(), 'admin') ? (
-                    // eslint-disable-next-line react/jsx-key
-                    [<Grid.Column>
+                    [<Grid.Column key='usercalendar'>
                       <Link to="/usercalendar">
                       <Card fluid>
                         <Image src='images/calendar1.jpg' wrapped ui={false} />
@@ -100,8 +93,7 @@ class Landing extends React.Component {
                       {/** <Icon name='calendar' size='massive' className="landing-icons"/> */}
                       </Link>
                     </Grid.Column>,
-                      // eslint-disable-next-line react/jsx-key
-                      <Grid.Column>
+                      <Grid.Column key='admin'>
                         <Link to="/admin">
                         <Card fluid>
                           <Image src='images/collab.jpg' wrapped ui={false} />
@@ -112,8 +104,7 @@ class Landing extends React.Component {
                         {/** <Icon name='comment alternate' size='massive' className="landing-icons"/> */}
                         </Link>
                       </Grid.Column>,
-                      // eslint-disable-next-line react/jsx-key
-                      <Grid.Column>
+                      <Grid.Column key='leaderboardadmin'>
                         <Link to="/leaderboardadmin">
                         <Card fluid>
                           <Image src='images/rewards.png' wrapped ui={false} />
@@ -127,8 +118,7 @@ class Landing extends React.Component {
                 ) : ''}
               </Grid.Row>
               {this.props.currentUser === '' ? (
-                  // eslint-disable-next-line react/jsx-key
-                  [<Grid.Row>
+                  [<Grid.Row key='signin'>
                     <Header as="h3"><Link to="/signin">Login</Link> to create a session, view sessions, or view the leaderboard.</Header>
                   </Grid.Row>]
               ) : ''}
