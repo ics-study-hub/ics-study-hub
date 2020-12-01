@@ -16,20 +16,23 @@ class ListStuffAdmin extends React.Component {
 
   /** Render the page once subscriptions have been received. */
   renderPage() {
+    const deleteTask = ({ _id }) => Stuffs.remove(_id);
     return (
         <Container>
-          <Header as="h2" textAlign="center">List Stuff (Admin)</Header>
-          <Table celled>
+          <Header as="h2" textAlign="center">Available Sessions (Admin)</Header>
+          <Table basic='very' className="ui table">
             <Table.Header>
               <Table.Row>
                 <Table.HeaderCell>Name</Table.HeaderCell>
-                <Table.HeaderCell>Quantity</Table.HeaderCell>
-                <Table.HeaderCell>Condition</Table.HeaderCell>
-                <Table.HeaderCell>Owner</Table.HeaderCell>
+                <Table.HeaderCell>Reason</Table.HeaderCell>
+                <Table.HeaderCell>Time</Table.HeaderCell>
+                <Table.HeaderCell>Date</Table.HeaderCell>
+                <Table.HeaderCell>Description</Table.HeaderCell>
+                <Table.HeaderCell>Find Group?</Table.HeaderCell>
               </Table.Row>
             </Table.Header>
             <Table.Body>
-              {this.props.stuffs.map((stuff) => <StuffItemAdmin key={stuff._id} stuff={stuff} />)}
+              {this.props.stuffs.map((stuff) => <StuffItemAdmin key={stuff._id} onDeleteClick={deleteTask} stuff={stuff} />)}
             </Table.Body>
           </Table>
         </Container>

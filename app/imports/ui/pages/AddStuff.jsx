@@ -10,11 +10,17 @@ import { Stuffs } from '../../api/stuff/Stuff';
 /** Create a schema to specify the structure of the data to appear in the form. */
 const formSchema = new SimpleSchema({
   name: String,
-  quantity: Number,
-  condition: {
+  reason: {
     type: String,
-    allowedValues: ['excellent', 'good', 'fair', 'poor'],
-    defaultValue: 'good',
+    allowedValues: ['Help', 'Finding a study session', 'Exam preparation'],
+    defaultValue: 'Help',
+  },
+  owner: String,
+  description: String,
+  findGroup: {
+    type: String,
+    allowedValues: ['yes', 'no'],
+    defaultValue: 'yes',
   },
 });
 

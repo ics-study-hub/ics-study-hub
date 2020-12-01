@@ -3,10 +3,10 @@ import SimpleSchema from 'simpl-schema';
 import { Tracker } from 'meteor/tracker';
 
 /** Encapsulates state and variable values for this collection. */
-class StuffsCollection {
+class SessionsCollection {
   constructor() {
     // The name of this collection.
-    this.name = 'StuffsCollection';
+    this.name = 'SessionsCollection';
     // Define the Mongo collection.
     this.collection = new Mongo.Collection(this.name);
     // Define the structure of each document in the collection.
@@ -15,11 +15,8 @@ class StuffsCollection {
       reason: {
         type: String,
         allowedValues: ['Help', 'Finding a study session', 'Exam preparation'],
-        defaultValue: 'Help',
       },
       owner: String,
-      time: String,
-      date: String,
       description: String,
       findGroup: {
         type: String,
@@ -35,4 +32,4 @@ class StuffsCollection {
   }
 }
 
-export const Stuffs = new StuffsCollection();
+export const GroupSession = new SessionsCollection();

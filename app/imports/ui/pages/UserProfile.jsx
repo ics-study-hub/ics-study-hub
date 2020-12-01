@@ -5,7 +5,7 @@ import { Header } from 'semantic-ui-react';
 class UserProfile extends React.Component {
   render() {
     return (
-      <Header as="h2" textAlign="center" inverted>
+      <Header as="h2" textAlign="center">
         <p>User Profile Page</p>
       </Header>
     );

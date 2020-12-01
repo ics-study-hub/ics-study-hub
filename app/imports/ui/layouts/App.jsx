@@ -8,7 +8,6 @@ import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import Landing from '../pages/Landing';
 import ListStuffAdmin from '../pages/ListStuffAdmin';
-import AddStuff from '../pages/AddStuff';
 import EditStuff from '../pages/EditStuff';
 import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
@@ -19,6 +18,8 @@ import Create from '../pages/Create';
 import UserProfile from '../pages/UserProfile';
 import ListLeaderboard from '../pages/ListLeaderboard';
 import ListStuff from '../pages/ListStuff';
+import AddStuff from '../pages/AddStuff';
+import ListLeaderboardAdmin from '../pages/ListLeaderboardAdmin';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -38,6 +39,7 @@ class App extends React.Component {
               <ProtectedRoute exact path="/usercalendar" component={UserCalendar}/>
               <ProtectedRoute path="/edit/:_id" component={EditStuff}/>
               <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
+              <AdminProtectedRoute path="/leaderboardadmin" component={ListLeaderboardAdmin}/>
               <ProtectedRoute path="/signout" component={Signout}/>
               <ProtectedRoute path="/user-profile" component={UserProfile}/>
               <Route component={NotFound}/>

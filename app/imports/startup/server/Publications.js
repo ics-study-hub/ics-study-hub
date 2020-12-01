@@ -1,14 +1,13 @@
 import { Meteor } from 'meteor/meteor';
 import { Roles } from 'meteor/alanning:roles';
 import { Stuffs } from '../../api/stuff/Stuff';
-import { Leaderboards } from '../../api/leaderboard/Leaderboards';
+import { Leaderboards } from '../../api/leaderboard/Leaderboard';
 
 // User-level publication.
 // If logged in, then publish documents owned by this user. Otherwise publish nothing.
 Meteor.publish(Stuffs.userPublicationName, function () {
-  if (this.userId) {
-    const username = Meteor.users.findOne(this.userId).username;
-    return Stuffs.collection.find({ owner: username });
+  if (this.userId && Roles.userIsInRole(this.userId, 'admin') === false) {
+    return Stuffs.collection.find();
   }
   return this.ready();
 });
@@ -25,9 +24,8 @@ Meteor.publish(Stuffs.adminPublicationName, function () {
 // User-level publication.
 // If logged in, then publish documents owned by this user. Otherwise publish nothing.
 Meteor.publish(Leaderboards.userPublicationName, function () {
-  if (this.userId) {
-    const username = Meteor.users.findOne(this.userId).username;
-    return Leaderboards.collection.find({ owner: username });
+  if (this.userId && Roles.userIsInRole(this.userId, 'admin') === false) {
+    return Leaderboards.collection.find();
   }
   return this.ready();
 });
