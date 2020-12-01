@@ -23,6 +23,10 @@ class NavBar {
     await testController.expect(loggedInUser).eql(username);
   }
 
+  async gotoCalendarPage(testController) {
+    await testController.click('#usercalendar');
+  }
+
   /** Check that someone is logged in, then click items to logout. */
   async logout(testController) {
     await testController.expect(Selector('#navbar-current-user').exists).ok();

@@ -48,7 +48,7 @@ class Create extends React.Component {
   render() {
     let fRef = null;
     return (
-        <Grid container centered>
+        <Grid container centered id="create-session">
           <Grid.Column>
             <Header as="h2" textAlign="center">Create a Session</Header>
             <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
@@ -59,7 +59,7 @@ class Create extends React.Component {
                 <TextField name='date'/>
                 <SelectField name='findGroup'/>
                 <LongTextField name = 'description'/>
-                <SubmitField value='Submit'/>
+                <SubmitField id="create-session-submit" value='Submit'/>
                 <ErrorsField/>
               </Segment>
             </AutoForm>
