@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Grid, Header, Container, Card, Image } from 'semantic-ui-react';
+
 
 /** A simple static component to render some text for the landing page. */
 class Landing extends React.Component {
@@ -40,6 +42,9 @@ class Landing extends React.Component {
                   </Card>
                   {/** <Icon name='users' size='massive' className="landing-icons"/> */}
                 </Grid.Column>
+              </Grid.Row>
+              <Grid.Row>
+                <Header as="h3"><Link to="/signin">Login</Link> to create a session, view sessions, or view the leaderboard.</Header>
               </Grid.Row>
             </Grid>
           </div>
