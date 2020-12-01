@@ -6,13 +6,13 @@ import { Leaderboards } from '../../api/leaderboard/Leaderboard';
 
 /** Initialize the database with a default data document. */
 function addData(data) {
-  console.log(`  Adding: ${data.name} (${data.owner})`);
+  console.log(`  Adding to sessions: ${data.name} (${data.owner})`);
   Stuffs.collection.insert(data);
 }
 
 /** Initialize the database with a default data document. */
 function addLeaderboard(data) {
-  console.log(`  Adding: ${data.name} (${data.owner})`);
+  console.log(`  Adding leaderboard: ${data.name} (${data.owner})`);
   Leaderboards.collection.insert(data);
 }
 
