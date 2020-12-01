@@ -1,0 +1,35 @@
+{
+  "accounts": [
+    { "email": "admin1@foo.com", "password": "changeme", "role": "admin" },
+    { "email": "admin2@foo.com", "password": "changeme", "role": "admin" },
+    { "email": "admin3@foo.com", "password": "changeme", "role": "admin" },
+    { "email": "eharmon@chessreview.com", "password": "changeme" },
+    { "email": "cdiggory@hogwarts.edu", "password": "changeme" },
+    { "email": "charlie.kelly@sunny.com", "password": "changeme" },
+    { "email": "nickmiller@clydes.com", "password": "changeme" },
+    { "email": "schmidt@assstrat.com", "password": "changeme" },
+    { "email": "michael.scott@michaelscottpapercompany.com", "password": "changeme" },
+    { "email": "fryder@disney.com", "password": "changeme" },
+    { "email": "regionalmanager@dundermifflin.com", "password": "changeme" },
+    { "email": "john@doe.com", "password": "changeme" },
+    { "email": "mgray@greyslonememorial.com", "password": "changeme" }
+  ],
+
+  "sessions": [
+    { "name": "Elizabeth Harmon", "reason": "Help", "owner": "eharmon@chessreview.com", "date":"12/4/2020", "time":"1:00 pm", "description": "Need help on my project", "findGroup": "yes" },
+    { "name": "Cedric Diggory", "reason": "Help", "owner": "cdiggory@hogwarts.edu", "date":"12/4/2020", "time":"2:00 pm", "description": "Studying for ICS 314 WODs", "findGroup": "yes" },
+    { "name": "Charlie Kelly", "reason": "Help", "owner": "charlie.kelly@sunny.com", "date":"12/4/2020", "time":"4:00 pm", "description": "Need help on my project", "findGroup": "yes" },
+    { "name": "Nick Miller", "reason": "Help", "owner": "nickmiller@clydes.com", "date":"12/1/2020", "time":"1:00 pm", "description": "Studying for ICS 314 WODs", "findGroup": "yes" },
+    { "name": "Winston Schmidt", "reason": "Help", "owner": "schmidt@assstrat.com", "date":"12/4/2020", "time":"3:00 pm", "description": "Need help on my project", "findGroup": "yes" },
+    { "name": "Michael Scott", "reason": "Help", "owner": "michael.scott@michaelscottpapercompany.com", "date":"12/4/2020", "time":"4:00 pm", "description": "Need help on my project", "findGroup": "yes" },
+    { "name": "Flynn Ryder", "reason": "Help", "owner": "fryder@disney.com", "date":"12/4/2020", "time":"4:00 pm", "description": "Need help on my project", "findGroup": "yes" },
+    { "name": "Dwight Schrute", "reason": "Help", "owner": "regionalmanager@dundermifflin.com", "date":"12/4/2020", "time":"4:00 pm", "description": "Need help on my project", "findGroup": "no" },
+    { "name": "Walter White", "reason": "Help", "owner": "john@doe.com", "date":"12/4/2020", "time":"4:00 pm", "description": "Need help on my project", "findGroup": "yes" },
+    { "name": "Meredith Gray", "reason": "Help", "owner": "mgray@greyslonememorial.com", "date":"12/4/2020", "time":"4:00 pm", "description": "Need help on my project", "findGroup": "yes" }
+  ],
+
+  "leaderboard": [
+    { "name": "Elizabeth Harmon", "ranking": 3, "owner": "eharmon@chessreview.com", "points": 3, "image": "https://i.redd.it/afsg0nb68l061.jpg" },
+    { "name": "Michael Scott", "ranking": 4, "owner": "michael.scott@michaelscottpapercompany.com", "points": 1, "image": "https://i.etsystatic.com/5805234/d/il/1a38f2/825515703/il_340x270.825515703_19nf.jpg" }
+  ]
+}
