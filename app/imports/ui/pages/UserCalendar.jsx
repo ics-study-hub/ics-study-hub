@@ -1,6 +1,7 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
+import { Container } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import FullCalendar, { formatDate } from '@fullcalendar/react';
 import dayGridPlugin from '@fullcalendar/daygrid';
@@ -41,6 +42,7 @@ class UserCalendar extends React.Component {
         <div className='demo-app'>
           {this.renderSidebar()}
           <div className='demo-app-main'>
+            <Container>
             <FullCalendar
                 plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
                 headerToolbar={{
@@ -65,6 +67,7 @@ class UserCalendar extends React.Component {
                 eventRemove={function(){}}
                 */
             />
+            </Container>
           </div>
         </div>
     );
@@ -72,6 +75,7 @@ class UserCalendar extends React.Component {
 
   renderSidebar() {
     return (
+        <Container>
         <div className='demo-app-sidebar'>
           <div className='demo-app-sidebar-section'>
             <h2>Instructions</h2>
@@ -87,7 +91,7 @@ class UserCalendar extends React.Component {
                   type='checkbox'
                   checked={this.state.weekendsVisible}
                   onChange={this.handleWeekendsToggle}
-              ></input>
+              />
               toggle weekends
             </label>
           </div>
@@ -98,6 +102,7 @@ class UserCalendar extends React.Component {
             </ul>
           </div>
         </div>
+        </Container>
     );
   }
 
