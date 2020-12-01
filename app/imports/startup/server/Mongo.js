@@ -31,3 +31,12 @@ if (Leaderboards.collection.find().count() === 0) {
     Meteor.settings.defaultLeaderboards.map(data => addLeaderboard(data));
   }
 }
+
+/** Initialize created sessions and leaderboard data from data.json */
+if ((Stuffs.collection.find().count() < 3) && (Leaderboards.collection.find().count() < 3)) {
+  const assetsFileName = 'data.json';
+  console.log(`Loading data from private/${assetsFileName}`);
+  const jsonData = JSON.parse(Assets.getText(assetsFileName));
+  jsonData.sessions.map(sessions => addData(sessions));
+  jsonData.leaderboard.map(leaderboard => addLeaderboard(leaderboard));
+}
