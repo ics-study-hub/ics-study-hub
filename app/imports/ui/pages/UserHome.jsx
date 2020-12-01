@@ -11,7 +11,7 @@ class UserHome extends React.Component {
           <div className="landing-page-style">
             <Grid id='landing-page' style={gridStyle} textAlign='center' container>
               <Grid.Row>
-                <Header as="h1" size="huge">Welcome to </Header>
+                <Header as="h1" size="huge">Welcome!!!</Header>
               </Grid.Row>
               <Grid.Row columns={3}>
                 <Grid.Column>

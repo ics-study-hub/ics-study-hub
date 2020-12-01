@@ -20,6 +20,7 @@ import ListLeaderboard from '../pages/ListLeaderboard';
 import ListStuff from '../pages/ListStuff';
 import AddStuff from '../pages/AddStuff';
 import ListLeaderboardAdmin from '../pages/ListLeaderboardAdmin';
+import UserHome from '../pages/UserHome';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -42,6 +43,7 @@ class App extends React.Component {
               <AdminProtectedRoute path="/leaderboardadmin" component={ListLeaderboardAdmin}/>
               <ProtectedRoute path="/signout" component={Signout}/>
               <ProtectedRoute path="/user-profile" component={UserProfile}/>
+              <ProtectedRoute path="/userhome" component={UserHome}/>
               <Route component={NotFound}/>
             </Switch>
             <Footer/>
