@@ -23,3 +23,5 @@ class CreateSessionPage {
 }
 
 export const newSession = new CreateSessionPage();
+
+/** work in progress. Taking care of parameters for the Create Session **/
