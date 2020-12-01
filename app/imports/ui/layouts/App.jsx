@@ -15,7 +15,7 @@ import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
 import UserCalendar from '../pages/UserCalendar';
 import Create from '../pages/Create';
-import UserProfile from '../pages/UserProfile';
+import UserProfile from '../pages/Profile';
 import ListLeaderboard from '../pages/ListLeaderboard';
 import ListStuff from '../pages/ListStuff';
 import AddStuff from '../pages/AddStuff';
