@@ -2,6 +2,7 @@ import { landingPage } from './landing.page';
 import { signinPage } from './signin.page';
 import { signoutPage } from './signout.page';
 import { navBar } from './navbar.component';
+import { newSession } from './createsession.page';
 
 /* global fixture:false, test:false */
 
@@ -48,4 +49,14 @@ test('Test the leaderboards page', async (testController) => {
   await testController.click('#list-leaderboard');
   await navBar.logout(testController);
   await signoutPage.isDisplayed(testController);
-})
+});
+
+test('Test the create sessions page', async (testController) => {
+  await navBar.gotoSigninPage(testController);
+  await signinPage.signin(testController, credentials.username, credentials.password);
+  await navBar.isLoggedIn(testController, credentials.username);
+  await testController.click('#create');
+  await newSession.createSession(testController);
+  await navBar.logout(testController);
+  await signoutPage.isDisplayed(testController);
+});

@@ -1,9 +1,12 @@
 import { Selector } from 'testcafe';
 import { navBar } from './navbar.component';
+import {LongTextField, SelectField, SubmitField, TextField} from "uniforms-semantic";
+import {Segment} from "semantic-ui-react";
+import React from "react";
 
 class CreateSessionPage {
   constructor() {
-    this.pageId = '#signup-page';
+    this.pageId = '#create-session';
     this.pageSelector = Selector(this.pageId);
   }
 
@@ -12,16 +15,22 @@ class CreateSessionPage {
     await testController.expect(this.pageSelector.exists).ok();
   }
 
-  /** Signs up a new user, then checks to see that they are logged in by checking the navbar. */
-  async createSession(testController, username, password) {
+  /** Checks that a session is successfully created */
+  async createSession(testController) {
     await this.isDisplayed(testController);
-    await testController.typeText('#signup-form-email', username);
-    await testController.typeText('#signup-form-password', password);
-    await testController.click('#signup-form-submit');
-    await navBar.isLoggedIn(testController, username);
+    await testController.typeText('#create-name', 'John Doe');
+    const reasonSelect = Selector('#create-reason');
+    const reasonOption = reasonSelect.find('option');
+    await testController.click(reasonSelect);
+    await testController.click(reasonOption.withText('Help'));
+    await testController.typeText('#create-time', '3:00 pm');
+    await testController.typeText('#create-date', '12/5/2020');
+    const findGroupSelect = Selector('#create-findgroup');
+    const findGroupOption = findGroupSelect.find('option');
+    await testController.click(findGroupSelect);
+    await testController.click(findGroupOption.withText('yes'));
+    await testController.typeText('#create-description', 'Help me build this website please');
   }
 }
 
 export const newSession = new CreateSessionPage();
-
-/** work in progress. Taking care of parameters for the Create Session **/
