@@ -1,4 +1,4 @@
-name: ics-study-hub
+name: ci-ics-study-hub
 
 on:
   push:
