@@ -1,4 +1,4 @@
-name: ics-study-hub
+name: ci-meteor-application-template-react
 
 on:
   push:
