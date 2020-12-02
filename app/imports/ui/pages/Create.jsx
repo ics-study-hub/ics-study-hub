@@ -53,12 +53,12 @@ class Create extends React.Component {
             <Header as="h2" textAlign="center">Create a Session</Header>
             <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
               <Segment>
-                <TextField name='name'/>
-                <SelectField name='reason'/>
-                <TextField name='time'/>
-                <TextField name='date'/>
-                <SelectField name='findGroup'/>
-                <LongTextField name = 'description'/>
+                <TextField id='create-name' name='name'/>
+                <SelectField id='create-reason' name='reason'/>
+                <TextField id='create-time' name='time'/>
+                <TextField id='create-date' name='date'/>
+                <SelectField id='create-findgroup' name='findGroup'/>
+                <LongTextField id='create-description' name = 'description'/>
                 <SubmitField id="create-session-submit" value='Submit'/>
                 <ErrorsField/>
               </Segment>
