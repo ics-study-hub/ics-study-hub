@@ -1,5 +1,5 @@
 import React from 'react';
-import { Loader, Table } from 'semantic-ui-react';
+import { Loader, Grid } from 'semantic-ui-react';
 import { Meteor } from 'meteor/meteor';
 import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
@@ -13,12 +13,16 @@ class UserProfile extends React.Component {
 
   renderPage() {
     return (
-        <Table.Column>
-          <Table.Cell>{this.props.profile.firstName}</Table.Cell>
-          <Table.Cell>{this.props.profile.lastName}</Table.Cell>
-          <Table.Cell>{this.props.profile.email}</Table.Cell>
-          <Table.Cell>{this.props.profile.description}</Table.Cell>
-        </Table.Column>
+        <Grid verticalAlign='middle' container>
+          <Grid.Row>
+            <Grid.Column>
+              <h2>{this.props.profile.username}</h2>
+              <h2>{this.props.profile.firstName}</h2>
+              <h2>{this.props.profile.lastName}</h2>
+              <h2>{this.props.profile.description}</h2>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
     );
   }
 }
