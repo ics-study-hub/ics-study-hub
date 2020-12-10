@@ -27,7 +27,6 @@ class StuffItemAdmin extends React.Component {
         <Table.Row>
           <Table.Cell>{this.props.stuff.name}</Table.Cell>
           <Table.Cell>{this.props.stuff.reason}</Table.Cell>
-          <Table.Cell>{this.props.stuff.time}</Table.Cell>
           <Table.Cell>{this.props.stuff.date}</Table.Cell>
           <Table.Cell>{this.props.stuff.description}</Table.Cell>
           <Table.Cell>{this.props.stuff.findGroup}</Table.Cell>

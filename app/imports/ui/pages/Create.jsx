@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, Segment, Header } from 'semantic-ui-react';
-import { AutoForm, ErrorsField, SelectField, SubmitField, TextField, LongTextField } from 'uniforms-semantic';
+import { AutoForm, ErrorsField, SelectField, SubmitField, TextField, DateField, LongTextField } from 'uniforms-semantic';
 import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
@@ -12,15 +12,14 @@ const formSchema = new SimpleSchema({
   name: String,
   reason: {
     type: String,
-    allowedValues: ['Help', 'Finding a study session', 'Exam preparation'],
+    allowedValues: ['Homework Help', 'Finding a Study Session', 'Exam Preparation', 'Questions'],
 },
   description: String,
-  time: String,
   date: String,
   findGroup: {
     type: String,
-    allowedValues: ['yes', 'no'],
-    defaultValue: 'yes',
+    allowedValues: ['Yes', 'No'],
+    defaultValue: 'Yes',
   },
 });
 
@@ -31,9 +30,9 @@ class Create extends React.Component {
 
   /** On submit, insert the data. */
   submit(data, formRef) {
-    const { name, reason, time, date, description, findGroup } = data;
+    const { name, reason, date, description, findGroup } = data;
     const owner = Meteor.user().username;
-    Stuffs.collection.insert({ name, reason, time, date, description, findGroup, owner },
+    Stuffs.collection.insert({ name, reason, date, description, findGroup, owner },
         (error) => {
           if (error) {
             swal('Error', error.message, 'error');
@@ -55,7 +54,6 @@ class Create extends React.Component {
               <Segment>
                 <TextField id='create-name' name='name'/>
                 <SelectField id='create-reason' name='reason'/>
-                <TextField id='create-time' name='time'/>
                 <TextField id='create-date' name='date'/>
                 <SelectField id='create-findgroup' name='findGroup'/>
                 <LongTextField id='create-description' name = 'description'/>
