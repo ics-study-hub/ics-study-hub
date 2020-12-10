@@ -16,16 +16,16 @@
   ],
 
   "sessions": [
-    { "name": "Elizabeth Harmon", "reason": "Help", "owner": "eharmon@chessreview.com", "date":"12/4/2020", "time":"1:00 pm", "description": "Need help on my project", "findGroup": "yes" },
-    { "name": "Cedric Diggory", "reason": "Help", "owner": "cdiggory@hogwarts.edu", "date":"12/4/2020", "time":"2:00 pm", "description": "Studying for ICS 314 WODs", "findGroup": "yes" },
-    { "name": "Charlie Kelly", "reason": "Help", "owner": "charlie.kelly@sunny.com", "date":"12/4/2020", "time":"4:00 pm", "description": "Need help on my project", "findGroup": "yes" },
-    { "name": "Nick Miller", "reason": "Help", "owner": "nickmiller@clydes.com", "date":"12/1/2020", "time":"1:00 pm", "description": "Studying for ICS 314 WODs", "findGroup": "yes" },
-    { "name": "Winston Schmidt", "reason": "Help", "owner": "schmidt@assstrat.com", "date":"12/4/2020", "time":"3:00 pm", "description": "Need help on my project", "findGroup": "yes" },
-    { "name": "Michael Scott", "reason": "Help", "owner": "michael.scott@michaelscottpapercompany.com", "date":"12/4/2020", "time":"4:00 pm", "description": "Need help on my project", "findGroup": "yes" },
-    { "name": "Flynn Ryder", "reason": "Help", "owner": "fryder@disney.com", "date":"12/4/2020", "time":"4:00 pm", "description": "Need help on my project", "findGroup": "yes" },
-    { "name": "Dwight Schrute", "reason": "Help", "owner": "regionalmanager@dundermifflin.com", "date":"12/4/2020", "time":"4:00 pm", "description": "Need help on my project", "findGroup": "no" },
-    { "name": "Walter White", "reason": "Help", "owner": "john@doe.com", "date":"12/4/2020", "time":"4:00 pm", "description": "Need help on my project", "findGroup": "yes" },
-    { "name": "Meredith Gray", "reason": "Help", "owner": "mgray@greyslonememorial.com", "date":"12/4/2020", "time":"4:00 pm", "description": "Need help on my project", "findGroup": "yes" }
+    { "name": "Elizabeth Harmon", "reason": "Homework Help", "owner": "eharmon@chessreview.com", "date":"Thu Dec 10 2020 08:16:00 GMT-1000 (Hawaii-Aleutian Standard Time)", "time":"1:00 pm", "description": "Need help on my project", "findGroup": "Yes" },
+    { "name": "Cedric Diggory", "reason": "Homework Help", "owner": "cdiggory@hogwarts.edu", "date":"Thu Dec 10 2020 08:16:00 GMT-1000 (Hawaii-Aleutian Standard Time)", "time":"2:00 pm", "description": "Studying for ICS 314 WODs", "findGroup": "Yes" },
+    { "name": "Charlie Kelly", "reason": "Homework Help", "owner": "charlie.kelly@sunny.com", "date":"Thu Dec 10 2020 08:16:00 GMT-1000 (Hawaii-Aleutian Standard Time)", "time":"4:00 pm", "description": "Need help on my project", "findGroup": "Yes" },
+    { "name": "Nick Miller", "reason": "Homework Help", "owner": "nickmiller@clydes.com", "date":"Thu Dec 10 2020 08:16:00 GMT-1000 (Hawaii-Aleutian Standard Time)", "time":"1:00 pm", "description": "Studying for ICS 314 WODs", "findGroup": "Yes" },
+    { "name": "Winston Schmidt", "reason": "Homework Help", "owner": "schmidt@assstrat.com", "date":"Thu Dec 10 2020 08:16:00 GMT-1000 (Hawaii-Aleutian Standard Time)", "time":"3:00 pm", "description": "Need help on my project", "findGroup": "Yes" },
+    { "name": "Michael Scott", "reason": "Homework Help", "owner": "michael.scott@michaelscottpapercompany.com", "date":"Thu Dec 10 2020 08:16:00 GMT-1000 (Hawaii-Aleutian Standard Time)", "time":"4:00 pm", "description": "Need help on my project", "findGroup": "Yes" },
+    { "name": "Flynn Ryder", "reason": "Homework Help", "owner": "fryder@disney.com", "date":"Thu Dec 10 2020 08:16:00 GMT-1000 (Hawaii-Aleutian Standard Time)", "time":"4:00 pm", "description": "Need help on my project", "findGroup": "Yes" },
+    { "name": "Dwight Schrute", "reason": "Homework Help", "owner": "regionalmanager@dundermifflin.com", "date":"Thu Dec 10 2020 08:16:00 GMT-1000 (Hawaii-Aleutian Standard Time)", "time":"4:00 pm", "description": "Need help on my project", "findGroup": "Yes" },
+    { "name": "Walter White", "reason": "Homework Help", "owner": "john@doe.com", "date":"Thu Dec 10 2020 08:16:00 GMT-1000 (Hawaii-Aleutian Standard Time)", "time":"4:00 pm", "description": "Need help on my project", "findGroup": "Yes" },
+    { "name": "Meredith Gray", "reason": "Homework Help", "owner": "mgray@greyslonememorial.com", "date":"Thu Dec 10 2020 08:16:00 GMT-1000 (Hawaii-Aleutian Standard Time)", "time":"4:00 pm", "description": "Need help on my project", "findGroup": "Yes" }
   ],
 
   "leaderboard": [

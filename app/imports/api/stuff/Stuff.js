@@ -14,17 +14,16 @@ class StuffsCollection {
       name: String,
       reason: {
         type: String,
-        allowedValues: ['Help', 'Finding a study session', 'Exam preparation'],
-        defaultValue: 'Help',
+        allowedValues: ['Homework Help', 'Finding a Study Session', 'Exam Preparation', 'Questions'],
+        defaultValue: 'Homework Help',
       },
       owner: String,
-      time: String,
       date: String,
       description: String,
       findGroup: {
         type: String,
-        allowedValues: ['yes', 'no'],
-        defaultValue: 'yes',
+        allowedValues: ['Yes', 'No'],
+        defaultValue: 'Yes',
       },
     }, { tracker: Tracker });
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.

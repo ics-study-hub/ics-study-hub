@@ -20,8 +20,8 @@ class SessionsCollection {
       description: String,
       findGroup: {
         type: String,
-        allowedValues: ['yes', 'no'],
-        defaultValue: 'yes',
+        allowedValues: ['Yes', 'No'],
+        defaultValue: 'Yes',
       },
     }, { tracker: Tracker });
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.
