@@ -51,12 +51,12 @@ test('Test the leaderboards page', async (testController) => {
   await signoutPage.isDisplayed(testController);
 });
 
-test('Test the create sessions page', async (testController) => {
+/**test('Test the create sessions page', async (testController) => {
   await navBar.gotoSigninPage(testController);
   await signinPage.signin(testController, credentials.username, credentials.password);
   await navBar.isLoggedIn(testController, credentials.username);
   await testController.click('#create');
-  //await newSession.createSession(testController);
+  await newSession.createSession(testController);
   await navBar.logout(testController);
   await signoutPage.isDisplayed(testController);
-});
+});*/
