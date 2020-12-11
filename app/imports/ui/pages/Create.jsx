@@ -54,7 +54,7 @@ class Create extends React.Component {
               <Segment>
                 <TextField id='create-name' name='name'/>
                 <SelectField id='create-reason' name='reason'/>
-                <TextField id='create-date' name='date'/>
+                <DateField id='create-date' name='date'/>
                 <SelectField id='create-findgroup' name='findGroup'/>
                 <LongTextField id='create-description' name = 'description'/>
                 <SubmitField id="create-session-submit" value='Submit'/>
