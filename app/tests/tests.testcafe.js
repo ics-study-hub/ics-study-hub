@@ -71,15 +71,6 @@ test('Test the create sessions page', async (testController) => {
   await signoutPage.isDisplayed(testController);
 });
 
-test('Test the calendar page', async (testController) => {
-  await navBar.gotoSigninPage(testController);
-  await signinPage.signin(testController, credentials.username, credentials.password);
-  await navBar.isLoggedIn(testController, credentials.username);
-  await testController.click('#usercalendar');
-  await navBar.logout(testController);
-  await signoutPage.isDisplayed(testController);
-});
-
 test('Test the admin', async (testController) => {
   await navBar.gotoSigninPage(testController);
   await signinPage.signin(testController, admin.username, admin.password);
