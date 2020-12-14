@@ -3,6 +3,7 @@ import { signinPage } from './signin.page';
 import { signoutPage } from './signout.page';
 import { navBar } from './navbar.component';
 import { newSession } from './createsession.page';
+import { signupPage } from './signup.page';
 
 /* global fixture:false, test:false */
 
@@ -20,6 +21,14 @@ test('Test that signin and signout work', async (testController) => {
   await navBar.gotoSigninPage(testController);
   await signinPage.signin(testController, credentials.username, credentials.password);
   await navBar.isLoggedIn(testController, credentials.username);
+  await navBar.logout(testController);
+  await signoutPage.isDisplayed(testController);
+});
+
+test('Test that signup work', async (testController) => {
+  await navBar.gotoSignupPage(testController);
+  await signupPage.signupUser(testController, 'JohnDoe@foo.com', 'changeme')
+  await navBar.isLoggedIn(testController, 'JohnDoe@foo.com');
   await navBar.logout(testController);
   await signoutPage.isDisplayed(testController);
 });
@@ -62,5 +71,10 @@ test('Test the create sessions page', async (testController) => {
 });
 
 test('Test the calendar page', async (testController) => {
-  await navBar.gotoCalendarPage(testController);
+  await navBar.gotoSigninPage(testController);
+  await signinPage.signin(testController, credentials.username, credentials.password);
+  await navBar.isLoggedIn(testController, credentials.username);
+  await testController.click('#usercalendar');
+  await navBar.logout(testController);
+  await signoutPage.isDisplayed(testController);
 });
