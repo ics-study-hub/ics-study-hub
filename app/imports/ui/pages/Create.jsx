@@ -15,8 +15,13 @@ const formSchema = new SimpleSchema({
     allowedValues: ['Homework Help', 'Finding a Study Session', 'Exam Preparation', 'Questions'],
 },
   description: String,
-  date: String,
+  date: {
+    label: 'Date & Time',
+    type:Date,
+    defaultValue: new Date(),
+  },
   findGroup: {
+    label: 'Find Group?',
     type: String,
     allowedValues: ['Yes', 'No'],
     defaultValue: 'Yes',
@@ -52,12 +57,12 @@ class Create extends React.Component {
             <Header as="h2" textAlign="center">Create a Session</Header>
             <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
               <Segment>
-                <TextField id='create-name' name='name'/>
-                <SelectField id='create-reason' name='reason'/>
-                <DateField id='create-date' name='date'/>
-                <SelectField id='create-findgroup' name='findGroup'/>
-                <LongTextField id='create-description' name = 'description'/>
-                <SubmitField id="create-session-submit" value='Submit'/>
+                <TextField id='create-name' name='name' showInlineError={true} placeholder={'Your name'}/>
+                <SelectField id='create-reason' name='reason' showInlineError={true}/>
+                <DateField id='create-date' name='date' showInlineError={true}/>
+                <SelectField id='create-findgroup' name='findGroup' showInlineError={true}/>
+                <LongTextField id='create-description' name = 'description' showInlineError={true} placeholder={'Description of your study session'}/>
+                <SubmitField id="create-session-submit" value='Submit' showInlineError={true} />
                 <ErrorsField/>
               </Segment>
             </AutoForm>

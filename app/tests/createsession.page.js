@@ -1,8 +1,4 @@
 import { Selector } from 'testcafe';
-import { navBar } from './navbar.component';
-import {LongTextField, SelectField, SubmitField, TextField} from "uniforms-semantic";
-import {Segment} from "semantic-ui-react";
-import React from "react";
 
 class CreateSessionPage {
   constructor() {
@@ -22,14 +18,12 @@ class CreateSessionPage {
     const reasonSelect = Selector('#create-reason');
     const reasonOption = reasonSelect.find('option');
     await testController.click(reasonSelect);
-    await testController.click(reasonOption.withText('Help'));
-    await testController.typeText('#create-time', '3:00 pm');
-    await testController.typeText('#create-date', '12/5/2020');
+    await testController.click(reasonOption.withText('Questions'));
     const findGroupSelect = Selector('#create-findgroup');
     const findGroupOption = findGroupSelect.find('option');
     await testController.click(findGroupSelect);
-    await testController.click(findGroupOption.withText('yes'));
-    await testController.typeText('#create-description', 'Help me build this website please');
+    await testController.click(findGroupOption.withText('Yes'));
+    await testController.typeText('#create-description', 'I have a question about my code for ICS 314');
   }
 }
 
