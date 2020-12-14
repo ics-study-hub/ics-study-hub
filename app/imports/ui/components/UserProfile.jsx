@@ -1,5 +1,5 @@
 import React from 'react';
-import { Loader, Table } from 'semantic-ui-react';
+import {Container, Grid, Header, Loader, Table} from 'semantic-ui-react';
 import { Meteor } from 'meteor/meteor';
 import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
@@ -11,27 +11,28 @@ class UserProfile extends React.Component {
     return (this.props.ready) ? this.renderPage() : <Loader active>Getting Data</Loader>;
   }
 
-  renderPage() {
+  render() {
+    const currentUser = Meteor.user();
+    console.log(currentUser);
     return (
-        <Table.Column>
-          <Table.Cell>{this.props.profile.firstName}</Table.Cell>
-          <Table.Cell>{this.props.profile.lastName}</Table.Cell>
-          <Table.Cell>{this.props.profile.email}</Table.Cell>
-          <Table.Cell>{this.props.profile.description}</Table.Cell>
-        </Table.Column>
+        <Container fluid>
+          <div className="landing-page-style">
+            <Grid id='profile-page' textAlign='center' container>
+              <Grid.Row> <Header as="h1">Hello {currentUser.username}</Header> </Grid.Row>
+            </Grid>
+          </div>
+        </Container>
     );
   }
 }
 
 UserProfile.propTypes = {
-  profile: PropTypes.object.isRequired,
   ready: PropTypes.bool.isRequired,
 };
 
 export default withTracker(() => {
-  const subscription = Meteor.subscribe(UserInfo.userPublicationName);
+  const subscription = Meteor.subscribe('userData');
   return {
-    users: UserInfo.collection.findOne(),
     ready: subscription.ready(),
   };
 })(UserProfile);

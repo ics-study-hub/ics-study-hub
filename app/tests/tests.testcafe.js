@@ -55,7 +55,7 @@ test('Test the create sessions page', async (testController) => {
   await navBar.gotoSigninPage(testController);
   await signinPage.signin(testController, credentials.username, credentials.password);
   await navBar.isLoggedIn(testController, credentials.username);
-  await testController.click('#create');
+  await testController.click('#create-session');
   await newSession.createSession(testController);
   await navBar.logout(testController);
   await signoutPage.isDisplayed(testController);

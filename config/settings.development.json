@@ -1,7 +1,7 @@
 {
   "defaultAccounts": [
-    { "email": "admin@foo.com", "password": "changeme", "role": "admin" },
-    { "email": "john@foo.com", "password": "changeme" }
+    { "email": "admin@foo.com", "password": "changeme", "role": "admin", "firstname": "Admin", "lastname": "Istrator", "points": 0 },
+    { "email": "john@foo.com", "password": "changeme", "firstname": "John", "lastname": "Doe", "points": 0 }
   ],
 
   "defaultData": [
@@ -13,5 +13,10 @@
   "defaultLeaderboards": [
     { "name": "Philip Johnson", "ranking": 1, "owner": "john@foo.com", "points": 5, "image": "https://philipmjohnson.github.io/images/philip2.jpeg" },
     { "name": "Henri Casanova", "ranking": 2, "owner": "john@foo.com", "points": 3, "image": "https://avatars0.githubusercontent.com/u/7494478?s=460&v=4"}
+  ],
+
+  "defaultProfiles": [
+
+    { "username": "john@foo.com", "firstName": "John", "lastName": "Doe", "email": "john@foo.com", "expectedGradDate": "Fall 2020", "description": "ICS Major"  }
   ]
 }

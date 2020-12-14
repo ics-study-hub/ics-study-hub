@@ -51,8 +51,7 @@ Meteor.publish(null, function () {
 
 Meteor.publish(UserInfo.userPublicationName, function () {
   if (this.userId) {
-    const username = Meteor.users.findOne(this.userId).username;
-    return UserInfo.collection.find({ owner: username });
+    return Meteor.users.find({ _id: this.userId });
   }
   return this.ready();
 });
@@ -60,6 +59,19 @@ Meteor.publish(UserInfo.userPublicationName, function () {
 Meteor.publish(UserInfo.adminPublicationName, function () {
   if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
     return UserInfo.collection.find();
+  }
+  return this.ready();
+});
+
+Meteor.publish('userData', function () {
+  if (this.userId) {
+    return Meteor.users.find({ _id: this.userId }, {
+      fields: {
+        firstname: 1,
+        lastname: 1,
+        rating: 1,
+      },
+    });
   }
   return this.ready();
 });

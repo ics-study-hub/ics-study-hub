@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Stuffs } from '../../api/stuff/Stuff.js';
 import { Leaderboards } from '../../api/leaderboard/Leaderboard';
+import { UserInfo } from '../../api/userInfo/UserInfo';
 
 /* eslint-disable no-console */
 
@@ -14,6 +15,12 @@ function addData(data) {
 function addLeaderboard(data) {
   console.log(`  Adding leaderboard: ${data.name} (${data.owner})`);
   Leaderboards.collection.insert(data);
+}
+
+/** Initialize the database with a default data document. */
+function addProfile(data) {
+  console.log(`  Adding profile: ${data.username}`);
+  UserInfo.collection.insert(data);
 }
 
 /** Initialize the collection if empty. */
@@ -32,6 +39,14 @@ if (Leaderboards.collection.find().count() === 0) {
   }
 }
 
+/** Initialize the collection if empty. */
+if (UserInfo.collection.find().count() === 0) {
+  if (Meteor.settings.defaultProfiles) {
+    console.log('Creating default user profiles.');
+    Meteor.settings.defaultProfiles.map(data => addProfile(data));
+  }
+}
+
 /** Initialize created sessions and leaderboard data from data.json */
 if ((Stuffs.collection.find().count() < 3) && (Leaderboards.collection.find().count() < 3)) {
   const assetsFileName = 'data.json';
@@ -40,3 +55,5 @@ if ((Stuffs.collection.find().count() < 3) && (Leaderboards.collection.find().co
   jsonData.sessions.map(sessions => addData(sessions));
   jsonData.leaderboard.map(leaderboard => addLeaderboard(leaderboard));
 }
+
+

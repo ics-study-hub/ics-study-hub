@@ -14,7 +14,7 @@ class UserInfoCollection {
       firstName: String,
       lastName: String,
       email: String,
-      expectedGradeDate: String,
+      expectedGradDate: String,
       description: String,
     }, { tracker: Tracker });
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.
