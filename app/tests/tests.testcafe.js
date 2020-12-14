@@ -60,3 +60,7 @@ test('Test the create sessions page', async (testController) => {
   await navBar.logout(testController);
   await signoutPage.isDisplayed(testController);
 });
+
+test('Test the calendar page', async (testController) => {
+  await navBar.gotoCalendarPage(testController);
+});

@@ -17,7 +17,7 @@ const formSchema = new SimpleSchema({
   description: String,
   date: {
     label: 'Date & Time',
-    type:Date,
+    type: Date,
     defaultValue: new Date(),
   },
   findGroup: {
