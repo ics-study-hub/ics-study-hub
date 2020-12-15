@@ -23,6 +23,7 @@ class ListStuffAdmin extends React.Component {
             <Table.Header>
               <Table.Row>
                 <Table.HeaderCell>Name</Table.HeaderCell>
+                <Table.HeaderCell>Class</Table.HeaderCell>
                 <Table.HeaderCell>Reason</Table.HeaderCell>
                 <Table.HeaderCell>Date & Time</Table.HeaderCell>
                 <Table.HeaderCell>Description</Table.HeaderCell>

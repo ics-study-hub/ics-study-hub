@@ -6,8 +6,8 @@
 
   "defaultData": [
 
-    { "name": "Johnny Johnson", "reason": "Homework Help", "owner": "john@foo.com", "date":"Thu Dec 10 2020 08:16:00 GMT-1000 (Hawaii-Aleutian Standard Time)", "description": "There is a bug in my program but I cannot find it. Can I please get some help?", "findGroup": "Yes" },
-    { "name": "Amanda McPhearson", "reason": "Homework Help", "owner": "john@foo.com", "date":"Thu Dec 10 2020 08:16:00 GMT-1000 (Hawaii-Aleutian Standard Time)", "description": "Need help on my project", "findGroup": "Yes" }
+    { "name": "Johnny Johnson", "className":"ICS 111", "reason": "Homework Help", "owner": "john@foo.com", "date":"Thu Dec 10 2020 08:16:00 GMT-1000 (Hawaii-Aleutian Standard Time)", "description": "There is a bug in my program but I cannot find it. Can I please get some help?", "findGroup": "Yes" },
+    { "name": "Amanda McPhearson", "className":"ICS 111", "reason": "Homework Help", "owner": "john@foo.com", "date":"Thu Dec 10 2020 08:16:00 GMT-1000 (Haw aii-Aleutian Standard Time)", "description": "Need help on my project", "findGroup": "Yes" }
   ],
 
   "defaultLeaderboards": [

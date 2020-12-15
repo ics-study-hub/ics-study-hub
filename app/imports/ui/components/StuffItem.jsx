@@ -9,6 +9,7 @@ class StuffItem extends React.Component {
     return (
         <Table.Row>
           <Table.Cell>{this.props.stuff.name}</Table.Cell>
+          <Table.Cell>{this.props.stuff.className}</Table.Cell>
           <Table.Cell>{this.props.stuff.reason}</Table.Cell>
           <Table.Cell>{this.props.stuff.date}</Table.Cell>
           <Table.Cell>{this.props.stuff.description}</Table.Cell>
