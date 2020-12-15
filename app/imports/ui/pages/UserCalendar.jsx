@@ -80,8 +80,8 @@ class UserCalendar extends React.Component {
           <div className='demo-app-sidebar-section'>
             <h2>Instructions</h2>
             <ul>
-              <li>Select dates and you will be prompted to create a new event</li>
-              <li>Drag, drop, and resize events</li>
+              <li>Select dates and you will be prompted to create a new study session</li>
+              <li>Drag, drop, and resize sessions</li>
               <li>Click an event to delete it</li>
             </ul>
           </div>
