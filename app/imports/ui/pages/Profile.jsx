@@ -1,10 +1,8 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import {Header, Grid, Container, Loader, Table, Image} from 'semantic-ui-react';
+import { Header, Grid, Loader, Table, Image } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
-
-
 /** Render a Not Found page if the user enters a URL that doesn't match any route. */
 class Profile extends React.Component {
 
@@ -13,18 +11,19 @@ class Profile extends React.Component {
   }
 
   renderPage() {
+  const user = Meteor.user();
   const firstName = user.profile.firstname;
   const lastName = user.profile.lastname;
   const points = user.profile.points;
   const major = user.profile.major;
   const grad_date = user.profile.grad_date;
-  console.log(grad_date);
+  // console.log(grad_date);
 
     return (
 
           <div className="profile-page-style">
             <Grid id='profile-page' textAlign='center' verticalAlign='middle' container columns={2}>
-              <Grid.Row width={9}><Header as="h1"> User Profile </Header></Grid.Row>
+              <Grid.Row width={9}><Header as="h1" > User Profile </Header></Grid.Row>
               <Grid.Row>
                 <Grid.Column width={4}><Image src='images/defaultuser.png' size='medium' /></Grid.Column>
                 <Grid.Column width={4}>
