@@ -17,13 +17,14 @@ class ListLeaderboardAdmin extends React.Component {
   renderPage() {
     return (
         <Container>
-          <Header as="h2" textAlign="center">Leaderboard</Header>
-          <Table basic='very' className="ui table">
+          <Header as="h2" textAlign="center">Leaderboard (Admin)</Header>
+          <Table style={{ backgroundColor: 'white' }}>
             <Table.Header>
               <Table.Row>
                 <Table.HeaderCell>Ranking</Table.HeaderCell>
                 <Table.HeaderCell>Name</Table.HeaderCell>
                 <Table.HeaderCell>Points</Table.HeaderCell>
+                <Table.HeaderCell/>
               </Table.Row>
             </Table.Header>
             <Table.Body>

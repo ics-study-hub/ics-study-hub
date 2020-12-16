@@ -19,7 +19,7 @@ class ListLeaderboard extends React.Component {
     return (
         <Container>
           <Header as="h2" textAlign="center">Leaderboard</Header>
-          <Table basic='very' className="ui table">
+          <Table style={{ backgroundColor: 'white' }}>
             <Table.Header>
               <Table.Row>
                 <Table.HeaderCell>Ranking</Table.HeaderCell>
