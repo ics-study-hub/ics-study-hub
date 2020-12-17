@@ -20,7 +20,6 @@ import ListStuff from '../pages/ListStuff';
 import AddStuff from '../pages/AddStuff';
 import ListLeaderboardAdmin from '../pages/ListLeaderboardAdmin';
 import Profile from '../pages/Profile';
-import UserProfile from '../components/UserProfile';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {

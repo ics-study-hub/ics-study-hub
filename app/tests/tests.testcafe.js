@@ -9,7 +9,7 @@ import { signupPage } from './signup.page';
 
 /** Credentials for one of the sample users defined in settings.development.json. */
 const credentials = { username: 'john@foo.com', password: 'changeme' };
-const admin = { username: 'admin@foo.com', password: 'changeme'};
+const admin = { username: 'admin@foo.com', password: 'changeme' };
 
 fixture('meteor-application-template-react localhost test with default db')
     .page('http://localhost:3000');
@@ -28,7 +28,7 @@ test('Test that signin and signout work', async (testController) => {
 
 test('Test that signup work', async (testController) => {
   await navBar.gotoSignupPage(testController);
-  await signupPage.signupUser(testController, 'JohnDoe@foo.com', 'changeme')
+  await signupPage.signupUser(testController, 'JohnDoe@foo.com', 'changeme', 'John', 'Doe', 'ICS', '2022');
   await navBar.isLoggedIn(testController, 'JohnDoe@foo.com');
   await navBar.logout(testController);
   await signoutPage.isDisplayed(testController);
