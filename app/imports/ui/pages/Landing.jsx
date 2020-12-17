@@ -19,7 +19,7 @@ class Landing extends React.Component {
               </Grid.Row>
               <Grid.Row columns={3}>
                 {this.props.currentUser === '' ? (
-                    [<Grid.Column key='create'>
+                    [<Grid.Column key='join'>
                       <Card fluid>
                         <Image src='images/calendar1.jpg' wrapped ui={false} />
                         <Card.Content>
