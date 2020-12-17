@@ -1,9 +1,8 @@
 import React from 'react';
-import {Container, Grid, Header, Loader, Table} from 'semantic-ui-react';
+import { Container, Grid, Header, Loader } from 'semantic-ui-react';
 import { Meteor } from 'meteor/meteor';
 import PropTypes from 'prop-types';
 import { withTracker } from 'meteor/react-meteor-data';
-import { UserInfo } from '../../api/userInfo/UserInfo';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class UserProfile extends React.Component {
@@ -11,9 +10,8 @@ class UserProfile extends React.Component {
     return (this.props.ready) ? this.renderPage() : <Loader active>Getting Data</Loader>;
   }
 
-  render() {
+  renderPage() {
     const currentUser = Meteor.user();
-    console.log(currentUser);
     return (
         <Container fluid>
           <div className="landing-page-style">

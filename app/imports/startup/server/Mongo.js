@@ -55,5 +55,3 @@ if ((Stuffs.collection.find().count() < 3) && (Leaderboards.collection.find().co
   jsonData.sessions.map(sessions => addData(sessions));
   jsonData.leaderboard.map(leaderboard => addLeaderboard(leaderboard));
 }
-
-
