@@ -15,11 +15,12 @@ import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
 import UserCalendar from '../pages/UserCalendar';
 import Create from '../pages/Create';
-import UserProfile from '../pages/UserProfile';
 import ListLeaderboard from '../pages/ListLeaderboard';
 import ListStuff from '../pages/ListStuff';
 import AddStuff from '../pages/AddStuff';
 import ListLeaderboardAdmin from '../pages/ListLeaderboardAdmin';
+import Profile from '../pages/Profile';
+import UserProfile from '../components/UserProfile';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -41,7 +42,7 @@ class App extends React.Component {
               <AdminProtectedRoute path="/admin" component={ListStuffAdmin}/>
               <AdminProtectedRoute path="/leaderboardadmin" component={ListLeaderboardAdmin}/>
               <ProtectedRoute path="/signout" component={Signout}/>
-              <ProtectedRoute path="/user-profile" component={UserProfile}/>
+              <ProtectedRoute path="/user-profile" component={Profile}/>
               <Route component={NotFound}/>
             </Switch>
             <Footer/>

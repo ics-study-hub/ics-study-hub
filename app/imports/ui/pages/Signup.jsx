@@ -21,8 +21,8 @@ class Signup extends React.Component {
 
   /** Handle Signup submission. Create user account and a profile entry, then redirect to the home page. */
   submit = () => {
-    const { email, password } = this.state;
-    Accounts.createUser({ email, username: email, password }, (err) => {
+    const { email, password, firstname, lastname, major, expgrad } = this.state;
+    Accounts.createUser({ email, username: email, password, profile: { firstname: firstname, lastname: lastname, points: 0, major: major, grad_date: expgrad } }, (err) => {
       if (err) {
         this.setState({ error: err.reason });
       } else {
@@ -56,6 +56,38 @@ class Signup extends React.Component {
                   type="email"
                   placeholder="E-mail address"
                   onChange={this.handleChange}
+                />
+                <Form.Input
+                    label="First Name"
+                    id="signup-form-firstname"
+                    name="firstname"
+                    type="firstname"
+                    placeholder="First Name"
+                    onChange={this.handleChange}
+                />
+                <Form.Input
+                    label="Last Name"
+                    id="signup-form-lastname"
+                    name="lastname"
+                    type="lastname"
+                    placeholder="Last Name"
+                    onChange={this.handleChange}
+                />
+                <Form.Input
+                    label="Major"
+                    id="signup-form-major"
+                    name="major"
+                    type="major"
+                    placeholder="Major"
+                    onChange={this.handleChange}
+                />
+                <Form.Input
+                    label="Expected Grad Date"
+                    id="signup-form-expgrad"
+                    name="expgrad"
+                    type="expgrad"
+                    placeholder="Semester Year"
+                    onChange={this.handleChange}
                 />
                 <Form.Input
                   label="Password"
