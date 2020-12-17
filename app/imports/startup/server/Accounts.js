@@ -43,6 +43,6 @@ if ((Meteor.users.find().count() <= 2)) {
   const assetsFileName = 'data.json';
   console.log(`Loading user data from private/${assetsFileName}`);
   const jsonData = JSON.parse(Assets.getText(assetsFileName));
-  jsonData.users.map(({ email, password, role, firstname, lastname, points }) => createUser(email, password, role, firstname, lastname, points));
+  jsonData.accounts.map(({ email, password, role, firstname, lastname, points }) => createUser(email, password, role, firstname, lastname, points));
   console.log(`User Count: ${Meteor.users.find().count()}`);
 }

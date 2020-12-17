@@ -18,9 +18,9 @@ class Profile extends React.Component {
   const major = user.profile.major;
   const grad_date = user.profile.grad_date;
   // console.log(grad_date);
+    console.log(user);
 
     return (
-
           <div className="profile-page-style">
             <Grid id='profile-page' textAlign='center' verticalAlign='middle' container columns={2}>
               <Grid.Row width={9}><Header as="h1" > User Profile </Header></Grid.Row>
