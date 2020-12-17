@@ -19,13 +19,14 @@ class ListStuff extends React.Component {
     return (
         <Container>
           <Header as="h2" textAlign="center">Available Sessions</Header>
-          <Table basic='very' className="ui table">
+          <Table style={{ backgroundColor: 'white' }}>
             <Table.Header>
               <Table.Row>
                 <Table.HeaderCell>Name</Table.HeaderCell>
+                <Table.HeaderCell>Class</Table.HeaderCell>
                 <Table.HeaderCell>Reason</Table.HeaderCell>
                 <Table.HeaderCell>Time</Table.HeaderCell>
-                <Table.HeaderCell>Date</Table.HeaderCell>
+                <Table.HeaderCell>Day</Table.HeaderCell>
                 <Table.HeaderCell>Description</Table.HeaderCell>
                 <Table.HeaderCell>Find Group?</Table.HeaderCell>
               </Table.Row>

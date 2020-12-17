@@ -1,87 +1,729 @@
 {
-  "users": [
-    { "email": "admin1@foo.com", "password": "changeme", "role": "admin" },
-    { "email": "admin2@foo.com", "password": "changeme", "role": "admin" },
-    { "email": "admin3@foo.com", "password": "changeme", "role": "admin" },
-    { "email": "eharmon@chessreview.com", "password": "changeme" },
-    { "email": "cdiggory@hogwarts.edu", "password": "changeme" },
-    { "email": "charlie.kelly@sunny.com", "password": "changeme" },
-    { "email": "nickmiller@clydes.com", "password": "changeme" },
-    { "email": "schmidt@assstrat.com", "password": "changeme" },
-    { "email": "michael.scott@michaelscottpapercompany.com", "password": "changeme" },
-    { "email": "fryder@disney.com", "password": "changeme" },
-    { "email": "regionalmanager@dundermifflin.com", "password": "changeme" },
-    { "email": "john@doe.com", "password": "changeme" },
-    { "email": "mgray@greyslonememorial.com", "password": "changeme" },
-    { "email": "scooper@caltech.edu", "password": "changeme" },
-    { "email": "jon@nightswatch.org", "password": "changeme" },
-    { "email": "chanandler@aol.com", "password": "changeme" },
-    { "email": "gellar@dinomuseum.org", "password": "changeme" },
-    { "email": "lemon@thegirlieshow.com", "password": "changeme" },
-    { "email": "gilmore@aol.com", "password": "changeme" },
-    { "email": "tommy@picklesinventions.com", "password": "changeme" },
-    { "email": "morgan@flpd.com", "password": "changeme" },
-    { "email": "house@md.edu", "password": "changeme" },
-    { "email": "pparker@nyu.edu", "password": "changeme" }
-
+  "accounts": [
+    {
+      "email": "admin1@foo.com",
+      "password": "changeme",
+      "role": "admin"
+    },
+    {
+      "email": "admin2@foo.com",
+      "password": "changeme",
+      "role": "admin"
+    },
+    {
+      "email": "admin3@foo.com",
+      "password": "changeme",
+      "role": "admin"
+    },
+    {
+      "email": "eharmon@chessreview.com",
+      "password": "changeme"
+    },
+    {
+      "email": "cdiggory@hogwarts.edu",
+      "password": "changeme"
+    },
+    {
+      "email": "charlie.kelly@sunny.com",
+      "password": "changeme"
+    },
+    {
+      "email": "nickmiller@clydes.com",
+      "password": "changeme"
+    },
+    {
+      "email": "schmidt@assstrat.com",
+      "password": "changeme"
+    },
+    {
+      "email": "michael.scott@michaelscottpapercompany.com",
+      "password": "changeme"
+    },
+    {
+      "email": "fryder@disney.com",
+      "password": "changeme"
+    },
+    {
+      "email": "regionalmanager@dundermifflin.com",
+      "password": "changeme"
+    },
+    {
+      "email": "john@doe.com",
+      "password": "changeme"
+    },
+    {
+      "email": "mgray@greyslonememorial.com",
+      "password": "changeme"
+    },
+    {
+      "email": "scooper@caltech.edu",
+      "password": "changeme"
+    },
+    {
+      "email": "jon@nightswatch.org",
+      "password": "changeme"
+    },
+    {
+      "email": "chanandler@aol.com",
+      "password": "changeme"
+    },
+    {
+      "email": "gellar@dinomuseum.org",
+      "password": "changeme"
+    },
+    {
+      "email": "lemon@thegirlieshow.com",
+      "password": "changeme"
+    },
+    {
+      "email": "gilmore@aol.com",
+      "password": "changeme"
+    },
+    {
+      "email": "tommy@picklesinventions.com",
+      "password": "changeme"
+    },
+    {
+      "email": "morgan@flpd.com",
+      "password": "changeme"
+    },
+    {
+      "email": "house@md.edu",
+      "password": "changeme"
+    },
+    {
+      "email": "pparker@nyu.edu",
+      "password": "changeme"
+    }
   ],
-
   "sessions": [
-    { "name": "Elizabeth Harmon", "reason": "Help", "owner": "eharmon@chessreview.com", "date":"12/4/2020", "time":"1:00 pm", "description": "Need help on my project", "findGroup": "yes" },
-    { "name": "Cedric Diggory", "reason": "Help", "owner": "cdiggory@hogwarts.edu", "date":"12/4/2020", "time":"2:00 pm", "description": "Studying for ICS 314 WODs", "findGroup": "yes" },
-    { "name": "Charlie Kelly", "reason": "Help", "owner": "charlie.kelly@sunny.com", "date":"12/4/2020", "time":"4:00 pm", "description": "Need help on my project", "findGroup": "yes" },
-    { "name": "Nick Miller", "reason": "Help", "owner": "nickmiller@clydes.com", "date":"12/1/2020", "time":"1:00 pm", "description": "Studying for ICS 314 WODs", "findGroup": "yes" },
-    { "name": "Winston Schmidt", "reason": "Help", "owner": "schmidt@assstrat.com", "date":"12/4/2020", "time":"3:00 pm", "description": "Need help on my project", "findGroup": "yes" },
-    { "name": "Michael Scott", "reason": "Help", "owner": "michael.scott@michaelscottpapercompany.com", "date":"12/4/2020", "time":"4:00 pm", "description": "Need help on my project", "findGroup": "yes" },
-    { "name": "Flynn Ryder", "reason": "Help", "owner": "fryder@disney.com", "date":"12/4/2020", "time":"4:00 pm", "description": "Need help on my project", "findGroup": "yes" },
-    { "name": "Dwight Schrute", "reason": "Help", "owner": "regionalmanager@dundermifflin.com", "date":"12/4/2020", "time":"4:00 pm", "description": "Need help on my project", "findGroup": "no" },
-    { "name": "Walter White", "reason": "Help", "owner": "john@doe.com", "date":"12/4/2020", "time":"4:00 pm", "description": "Need help on my project", "findGroup": "yes" },
-    { "name": "Meredith Gray", "reason": "Help", "owner": "mgray@greyslonememorial.com", "date":"12/4/2020", "time":"4:00 pm", "description": "Need help on my project", "findGroup": "yes" },
-    { "name": "Sheldon Cooper", "reason": "Help", "owner": "scooper@caltech.edu", "date":"12/5/2020", "time":"9:00 am", "description": "Teaching how to code physic equations", "findGroup": "no" },
-    { "name": "Jon Snow", "reason": "Exam preparation", "owner": "jon@nightswatch.org", "date":"12/5/2020", "time":"10:00 am", "description": "ICS 311 Final exam prep", "findGroup": "yes" },
-    { "name": "Chanandler Bong", "reason": "Help", "owner": "chanandler@aol.com", "date":"12/5/2020", "time":"11:30 am", "description": "Learning how to contribute to open source", "findGroup": "yes" },
-    { "name": "Ross Gellar", "reason": "Help", "owner": "gellar@dinomuseum.org", "date":"12/5/2020", "time":"11:30 am", "description": "Need help creating landing page for site", "findGroup": "yes" },
-    { "name": "Liz Lemon", "reason": "Help", "owner": "lemon@thegirlieshow.com", "date":"12/5/2020", "time":"12:00 pm", "description": "Reviewing OOP principles", "findGroup": "yes" },
-    { "name": "Lorelai Gilmore", "reason": "Help", "owner": "gilmore@aol.com", "date":"12/5/2020", "time":"12:30 pm", "description": "Algorithms practice", "findGroup": "yes" },
-    { "name": "Tommy Pickles", "reason": "Help", "owner": "tommy@picklesinventions.com", "date":"12/5/2020", "time":"1:00 pm", "description": "Need help on my project", "findGroup": "yes" },
-    { "name": "Dexter Morgan", "reason": "Help", "owner": "morgan@flpd.com", "date":"12/5/2020", "time":"2:00 pm", "description": "Cybersecurity concept review", "findGroup": "yes" },
-    { "name": "Gregory House", "reason": "Help", "owner": "house@md.edu", "date":"12/5/2020", "time":"3:00 pm", "description": "ICS 141 final review", "findGroup": "yes" },
-    { "name": "Peter Parker", "reason": "Help", "owner": "pparker@nyu.edu", "date":"12/5/2020", "time":"3:00 pm", "description": "Need help on my project", "findGroup": "yes" },
-    { "name": "Jared Dunn", "reason": "Help", "owner": "john@foo.com", "date":"12/5/2020", "time":"4:00 pm", "description": "Need help on my project", "findGroup": "yes" },
-    { "name": "Jim Halpert", "reason": "Help", "owner": "john@foo.com", "date":"12/6/2020", "time":"10:00 am", "description": "ICS 241 final review", "findGroup": "yes" },
-    { "name": "Glen Rhee", "reason": "Help", "owner": "john@foo.com", "date":"12/6/2020", "time":"11:00 am", "description": "Need help on my project", "findGroup": "yes" },
-    { "name": "Lucille Bluth", "reason": "Help", "owner": "john@foo.com", "date":"12/6/2020", "time":"12:00 pm", "description": "Debugging a program I made", "findGroup": "yes" },
-    { "name": "Lizzy Mcguire", "reason": "Help", "owner": "john@foo.com", "date":"12/6/2020", "time":"1:00 pm", "description": "Help building an application", "findGroup": "yes" },
-    { "name": "Chuckie Finster", "reason": "Help", "owner": "john@foo.com", "date":"12/6/2020", "time":"1:30 pm", "description": "Why can't my program compile?", "findGroup": "yes" },
-    { "name": "Huey Freeman", "reason": "Help", "owner": "john@foo.com", "date":"12/6/2020", "time":"2:00 pm", "description": "Need help on my project", "findGroup": "yes" },
-    { "name": "James Smith", "reason": "Help", "owner": "john@foo.com", "date":"12/6/2020", "time":"3:00 pm", "description": "ICS homework help", "findGroup": "yes" },
-    { "name": "Maria Garcia", "reason": "Help", "owner": "john@foo.com", "date":"12/6/2020", "time":"3:30 pm", "description": "Need help on my project", "findGroup": "yes" },
-    { "name": "David Cross", "reason": "Help", "owner": "john@foo.com", "date":"12/6/2020", "time":"4:00 pm", "description": "Need help on my project", "findGroup": "yes" },
-    { "name": "Mike McCarthy", "reason": "Help", "owner": "john@foo.com", "date":"12/7/2020", "time":"9:00 am", "description": "Need help on my project", "findGroup": "yes" },
-    { "name": "Mike Tomlin", "reason": "Help", "owner": "john@foo.com", "date":"12/7/2020", "time":"9:30 am", "description": "Need help on my project", "findGroup": "yes" },
-    { "name": "Jeremy Lin", "reason": "Help", "owner": "john@foo.com", "date":"12/7/2020", "time":"10:00 am", "description": "Need help on my project", "findGroup": "yes" },
-    { "name": "Alfred Alcott", "reason": "Help", "owner": "john@foo.com", "date":"12/7/2020", "time":"2:30 pm", "description": "Need help on my project", "findGroup": "yes" },
-    { "name": "Eric Buchanon", "reason": "Help", "owner": "john@foo.com", "date":"12/7/2020", "time":"3:00 pm", "description": "ICS homework help", "findGroup": "yes" },
-    { "name": "Luke Deems", "reason": "Help", "owner": "john@foo.com", "date":"12/8/2020", "time":"10:00 am", "description": "ICS homework help", "findGroup": "yes" },
-    { "name": "Alice Hopper", "reason": "Help", "owner": "john@foo.com", "date":"12/8/2020", "time":"11:00 am", "description": "ICS homework help", "findGroup": "yes" },
-    { "name": "Felix Allano", "reason": "Help", "owner": "john@foo.com", "date":"12/8/2020", "time":"12:00 pm", "description": "Need help on my project", "findGroup": "yes" },
-    { "name": "Bethany Dobs", "reason": "Help", "owner": "john@foo.com", "date":"12/8/2020", "time":"12:30 pm", "description": "Need help on my project", "findGroup": "yes" },
-    { "name": "Christine Carson", "reason": "Help", "owner": "john@foo.com", "date":"12/8/2020", "time":"3:00 pm", "description": "Need help on my project", "findGroup": "yes" },
-    { "name": "Albert Antonio", "reason": "Help", "owner": "john@foo.com", "date":"12/9/2020", "time":"11:00 am", "description": "Need help on my project", "findGroup": "yes" },
-    { "name": "Richard Wright", "reason": "Help", "owner": "john@foo.com", "date":"12/9/2020", "time":"12:00 pm", "description": "Need help on my project", "findGroup": "yes" },
-    { "name": "Lillian Alcos", "reason": "Help", "owner": "john@foo.com", "date":"12/9/2020", "time":"2:00 pm", "description": "Need help on my project", "findGroup": "yes" },
-    { "name": "Susan Marsas", "reason": "Help", "owner": "john@foo.com", "date":"12/9/2020", "time":"4:00 pm", "description": "ICS homework help", "findGroup": "yes" },
-    { "name": "Kawika Anderson", "reason": "Help", "owner": "john@foo.com", "date":"12/9/2020", "time":"4:30 pm", "description": "Need help on my project", "findGroup": "yes" },
-    { "name": "Lucy Deeds", "reason": "Help", "owner": "john@foo.com", "date":"12/10/2020", "time":"8:00 am", "description": "Need help on my project", "findGroup": "yes" },
-    { "name": "Molly Winterbottom", "reason": "Help", "owner": "john@foo.com", "date":"12/10/2020", "time":"9:00 am", "description": "ICS homework help", "findGroup": "yes" },
-    { "name": "Tony Chopper", "reason": "Help", "owner": "john@foo.com", "date":"12/11/2020", "time":"10:00 am", "description": "Need help on my project", "findGroup": "yes" },
-    { "name": "Red Milkerson", "reason": "Help", "owner": "john@foo.com", "date":"12/11/2020", "time":"11:00 am", "description": "Need help on my project", "findGroup": "yes" },
-    { "name": "Bell Adam", "reason": "Help", "owner": "john@foo.com", "date":"12/11/2020", "time":"12:00 pm", "description": "Need help on my project", "findGroup": "yes" },
-    { "name": "Milton Rice", "reason": "Help", "owner": "john@foo.com", "date":"12/11/2020", "time":"2:00 pm", "description": "ICS homework help", "findGroup": "yes" }
+    {
+      "name": "Elizabeth Harmon",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "eharmon@chessreview.com",
+      "time": "5:45 am",
+      "month": "December",
+      "day": "31",
+      "year": "2020",
+      "description": "Need help on my project",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Cedric Diggory",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "cdiggory@hogwarts.edu",
+      "time": "11:45 am",
+      "month": "December",
+      "day": "3",
+      "year": "2020",
+      "description": "Studying for ICS 314 WODs",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Charlie Kelly",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "charlie.kelly@sunny.com",
+      "time": "6:25 am",
+      "month": "December",
+      "day": "9",
+      "year": "2020",
+      "description": "Need help on my project",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Nick Miller",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "nickmiller@clydes.com",
+      "time": "9:55 pm",
+      "month": "December",
+      "day": "4",
+      "year": "2020",
+      "description": "Studying for ICS 314 WODs",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Winston Schmidt",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "schmidt@assstrat.com",
+      "time": "11:45 pm",
+      "month": "December",
+      "day": "14",
+      "year": "2020",
+      "description": "Need help on my project",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Michael Scott",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "michael.scott@michaelscottpapercompany.com",
+      "time": "4:45 pm",
+      "month": "December",
+      "day": "6",
+      "year": "2020",
+      "description": "Need help on my project",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Flynn Ryder",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "fryder@disney.com",
+      "time": "9:45 pm",
+      "month": "December",
+      "day": "5",
+      "year": "2020",
+      "description": "Need help on my project",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Dwight Schrute",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "regionalmanager@dundermifflin.com",
+      "time": "6:45 pm",
+      "month": "December",
+      "day": "11",
+      "year": "2020",
+      "description": "Need help on my project",
+      "findGroup": "No"
+    },
+    {
+      "name": "Walter White",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "john@doe.com",
+      "time": "9:45 pm",
+      "month": "December",
+      "day": "8",
+      "year": "2020",
+      "description": "Need help on my project",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Meredith Gray",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "mgray@greyslonememorial.com",
+      "time": "9:45 pm",
+      "month": "December",
+      "day": "6",
+      "year": "2020",
+      "description": "Need help on my project",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Sheldon Cooper",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "scooper@caltech.edu",
+      "time": "7:45 am",
+      "month": "December",
+      "day": "6",
+      "year": "2020",
+      "description": "Teaching how to code physic equations",
+      "findGroup": "No"
+    },
+    {
+      "name": "Jon Snow",
+      "className": "ICS 111",
+      "reason": "Exam Preparation",
+      "owner": "jon@nightswatch.org",
+      "time": "6:45 am",
+      "month": "December",
+      "day": "9",
+      "year": "2020",
+      "description": "ICS 311 Final exam prep",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Chanandler Bong",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "chanandler@aol.com",
+      "time": "8:45 pm",
+      "month": "December",
+      "day": "15",
+      "year": "2020",
+      "description": "Learning how to contribute to open source",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Ross Gellar",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "gellar@dinomuseum.org",
+      "time": "5:55 pm",
+      "month": "December",
+      "day": "21",
+      "year": "2020",
+      "description": "Need help creating landing page for site",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Liz Lemon",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "lemon@thegirlieshow.com",
+      "time": "3:45 pm",
+      "month": "December",
+      "day": "23",
+      "year": "2020",
+      "description": "Reviewing OOP principles",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Lorelai Gilmore",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "gilmore@aol.com",
+      "time": "5:44 pm",
+      "month": "December",
+      "day": "9",
+      "year": "2020",
+      "description": "Algorithms practice",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Tommy Pickles",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "tommy@picklesinventions.com",
+      "time": "8:45 am",
+      "month": "December",
+      "day": "23",
+      "year": "2020",
+      "description": "Need help on my project",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Dexter Morgan",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "morgan@flpd.com",
+      "time": "8:45 pm",
+      "month": "December",
+      "day": "24",
+      "year": "2020",
+      "description": "Cybersecurity concept review",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Gregory House",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "house@md.edu",
+      "time": "6:45 pm",
+      "month": "December",
+      "day": "30",
+      "year": "2020",
+      "description": "ICS 141 final review",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Peter Parker",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "pparker@nyu.edu",
+      "time": "12:45 pm",
+      "month": "December",
+      "day": "15",
+      "year": "2020",
+      "description": "Need help on my project",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Jared Dunn",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "john@foo.com",
+      "time": "8:45 am",
+      "month": "December",
+      "day": "26",
+      "year": "2020",
+      "description": "Need help on my project",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Jim Halpert",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "john@foo.com",
+      "time": "5:45 pm",
+      "month": "December",
+      "day": "15",
+      "year": "2020",
+      "description": "ICS 241 final review",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Glen Rhee",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "john@foo.com",
+      "time": "5:45 pm",
+      "month": "December",
+      "day": "24",
+      "year": "2020",
+      "description": "Need help on my project",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Lucille Bluth",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "john@foo.com",
+      "time": "5:45 pm",
+      "month": "December",
+      "day": "26",
+      "year": "2020",
+      "description": "Debugging a program I made",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Lizzy Mcguire",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "john@foo.com",
+      "time": "5:45 pm",
+      "month": "December",
+      "day": "3",
+      "year": "2020",
+      "description": "Help building an application",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Chuckie Finster",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "john@foo.com",
+      "time": "5:45 pm",
+      "month": "December",
+      "day": "8",
+      "year": "2020",
+      "description": "Why can't my program compile?",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Huey Freeman",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "john@foo.com",
+      "time": "5:45 pm",
+      "month": "December",
+      "day": "9",
+      "year": "2020",
+      "description": "Need help on my project",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "James Smith",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "john@foo.com",
+      "time": "5:45 pm",
+      "month": "December",
+      "day": "8",
+      "year": "2020",
+      "description": "ICS homework help",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Maria Garcia",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "john@foo.com",
+      "time": "5:45 pm",
+      "month": "December",
+      "day": "1",
+      "year": "2020",
+      "description": "Need help on my project",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "David Cross",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "john@foo.com",
+      "time": "5:45 pm",
+      "month": "December",
+      "day": "2",
+      "year": "2020",
+      "description": "Need help on my project",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Mike McCarthy",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "john@foo.com",
+      "time": "5:45 pm",
+      "month": "December",
+      "day": "3",
+      "year": "2020",
+      "description": "Need help on my project",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Mike Tomlin",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "john@foo.com",
+      "time": "5:45 pm",
+      "month": "December",
+      "day": "16",
+      "year": "2020",
+      "description": "Need help on my project",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Jeremy Lin",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "john@foo.com",
+      "time": "5:45 pm",
+      "month": "December",
+      "day": "5",
+      "year": "2020",
+      "description": "Need help on my project",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Alfred Alcott",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "john@foo.com",
+      "time": "5:45 pm",
+      "month": "December",
+      "day": "7",
+      "year": "2020",
+      "description": "Need help on my project",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Eric Buchanon",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "john@foo.com",
+      "time": "5:45 pm",
+      "month": "December",
+      "day": "6",
+      "year": "2020",
+      "description": "ICS homework help",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Luke Deems",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "john@foo.com",
+      "time": "5:45 pm",
+      "month": "December",
+      "day": "25",
+      "year": "2020",
+      "description": "ICS homework help",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Alice Hopper",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "john@foo.com",
+      "time": "5:45 pm",
+      "month": "December",
+      "day": "24",
+      "year": "2020",
+      "description": "ICS homework help",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Felix Allano",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "john@foo.com",
+      "time": "5:45 pm",
+      "month": "December",
+      "day": "23",
+      "year": "2020",
+      "description": "Need help on my project",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Bethany Dobs",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "john@foo.com",
+      "time": "5:45 pm",
+      "month": "December",
+      "day": "22",
+      "year": "2020",
+      "description": "Need help on my project",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Christine Carson",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "john@foo.com",
+      "time": "5:45 pm",
+      "month": "December",
+      "day": "21",
+      "year": "2020",
+      "description": "Need help on my project",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Albert Antonio",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "john@foo.com",
+      "time": "5:45 pm",
+      "month": "December",
+      "day": "28",
+      "year": "2020",
+      "description": "Need help on my project",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Richard Wright",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "john@foo.com",
+      "time": "5:45 pm",
+      "month": "December",
+      "day": "29",
+      "year": "2020",
+      "description": "Need help on my project",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Lillian Alcos",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "john@foo.com",
+      "time": "5:45 pm",
+      "month": "December",
+      "day": "8",
+      "year": "2020",
+      "description": "Need help on my project",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Susan Marsas",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "john@foo.com",
+      "time": "5:45 pm",
+      "month": "December",
+      "day": "7",
+      "year": "2020",
+      "description": "ICS homework help",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Kawika Anderson",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "john@foo.com",
+      "time": "5:45 pm",
+      "month": "December",
+      "day": "9",
+      "year": "2020",
+      "description": "Need help on my project",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Lucy Deeds",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "john@foo.com",
+      "time": "5:45 pm",
+      "month": "December",
+      "day": "11",
+      "year": "2020",
+      "description": "Need help on my project",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Molly Winterbottom",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "john@foo.com",
+      "time": "5:45 pm",
+      "month": "December",
+      "day": "12",
+      "year": "2020",
+      "description": "ICS homework help",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Tony Chopper",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "john@foo.com",
+      "time": "5:45 pm",
+      "month": "December",
+      "day": "13",
+      "year": "2020",
+      "description": "Need help on my project",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Red Milkerson",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "john@foo.com",
+      "time": "5:45 pm",
+      "month": "December",
+      "day": "14",
+      "year": "2020",
+      "description": "Need help on my project",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Bell Adam",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "john@foo.com",
+      "time": "5:45 pm",
+      "month": "December",
+      "day": "15",
+      "year": "2020",
+      "description": "Need help on my project",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Milton Rice",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "john@foo.com",
+      "time": "5:45 pm",
+      "month": "December",
+      "day": "16",
+      "year": "2020",
+      "description": "ICS homework help",
+      "findGroup": "Yes"
+    }
   ],
-
   "leaderboard": [
-    { "name": "Elizabeth Harmon", "ranking": 3, "owner": "eharmon@chessreview.com", "points": 3, "image": "https://i.redd.it/afsg0nb68l061.jpg" },
-    { "name": "Michael Scott", "ranking": 4, "owner": "michael.scott@michaelscottpapercompany.com", "points": 1, "image": "https://i.etsystatic.com/5805234/d/il/1a38f2/825515703/il_340x270.825515703_19nf.jpg" }
+    {
+      "name": "Elizabeth Harmon",
+      "ranking": 3,
+      "owner": "eharmon@chessreview.com",
+      "points": 3,
+      "image": "https://i.redd.it/afsg0nb68l061.jpg"
+    },
+    {
+      "name": "Michael Scott",
+      "ranking": 4,
+      "owner": "michael.scott@michaelscottpapercompany.com",
+      "points": 1,
+      "image": "https://i.etsystatic.com/5805234/d/il/1a38f2/825515703/il_340x270.825515703_19nf.jpg"
+    }
   ]
 }

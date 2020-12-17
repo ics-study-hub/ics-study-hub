@@ -1,22 +1,55 @@
 {
   "defaultAccounts": [
-    { "email": "admin@foo.com", "password": "changeme", "role": "admin", "firstname": "Admin", "lastname": "Istrator", "points": 0, "major": "CENG", "grad_date": "Fall 2020" },
-    { "email": "john@foo.com", "password": "changeme", "firstname": "John", "lastname": "Doe", "points": 0, "major": "ICS", "grad_date": "Fall 2020" }
+    {
+      "email": "admin@foo.com",
+      "password": "changeme",
+      "role": "admin"
+    },
+    {
+      "email": "john@foo.com",
+      "password": "changeme"
+    }
   ],
-
   "defaultData": [
-
-    { "name": "Johnny Johnson", "reason": "Help", "owner": "john@foo.com", "date":"11/16/2020", "time":"6:00 pm", "description": "There is a bug in my program but I cannot find it. Can I please get some help?", "findGroup": "yes" },
-    { "name": "Amanda McPhearson", "reason": "Help", "owner": "john@foo.com", "date":"12/1/2020", "time":"1:00 pm", "description": "Need help on my project", "findGroup": "yes" }
+    {
+      "name": "Johnny Johnson",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "john@foo.com",
+      "time": "5:12 pm",
+      "month": "December",
+      "day": "8",
+      "year": "2020",
+      "description": "There is a bug in my program but I cannot find it. Can I please get some help?",
+      "findGroup": "Yes"
+    },
+    {
+      "name": "Amanda McPhearson",
+      "className": "ICS 111",
+      "reason": "Homework Help",
+      "owner": "john@foo.com",
+      "time": "1:45 pm",
+      "month": "December",
+      "day": "1",
+      "year": "2020",
+      "description": "Need help on my project",
+      "findGroup": "Yes"
+    }
   ],
-
   "defaultLeaderboards": [
-    { "name": "Philip Johnson", "ranking": 1, "owner": "john@foo.com", "points": 5, "image": "https://philipmjohnson.github.io/images/philip2.jpeg" },
-    { "name": "Henri Casanova", "ranking": 2, "owner": "john@foo.com", "points": 3, "image": "https://avatars0.githubusercontent.com/u/7494478?s=460&v=4"}
-  ],
-
-  "defaultProfiles": [
-
-    { "username": "john@foo.com", "firstName": "John", "lastName": "Doe", "email": "john@foo.com", "expectedGradDate": "Fall 2020", "description": "ICS Major"  }
+    {
+      "name": "Philip Johnson",
+      "ranking": 1,
+      "owner": "john@foo.com",
+      "points": 5,
+      "image": "https://philipmjohnson.github.io/images/philip2.jpeg"
+    },
+    {
+      "name": "Henri Casanova",
+      "ranking": 2,
+      "owner": "john@foo.com",
+      "points": 3,
+      "image": "https://avatars0.githubusercontent.com/u/7494478?s=460&v=4"
+    }
   ]
 }
